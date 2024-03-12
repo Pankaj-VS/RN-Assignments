@@ -1,13 +1,13 @@
-import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {Image} from 'react-native-elements';
-import {styles} from './emptyNotifications-styles'
+import {Text, View, Image} from 'react-native';
 
-const EmptyNotifications = () => {
+import {styles} from './EmptyCard-styles';
+
+const EmptyCard = () => {
   return (
-    <View style={styles.noNotificationsContainer}>
+    <View style={styles.container}>
       <Image
-        source={require('../assets/images/EmptyNotifications.png')}
+        source={require('../../assets/images/notifications.png')}
         style={styles.imageContainer}
         resizeMode="contain"></Image>
       <View style={styles.contentContainer}>
@@ -23,4 +23,4 @@ const EmptyNotifications = () => {
   );
 };
 
-export default EmptyNotifications;
+export default EmptyCard;
