@@ -1,22 +1,22 @@
 import { StyleSheet, ViewStyle, TextStyle } from 'react-native'
 
-import { SPACING } from '../../theme/spacing'
+import { Spacing } from '../../theme/spacing'
 import { Typography } from '../../theme/typography'
 
-interface Styles {
+interface IStyles {
   container: ViewStyle
   imageBackground: ViewStyle
   imageHeadingContainer: ViewStyle
   imageHeading: TextStyle
 }
 
-export const styles = StyleSheet.create<Styles>({
+export const styles = StyleSheet.create<IStyles>({
   container: {
-    borderRadius: SPACING.space_16,
-    height: SPACING.space_148,
+    borderRadius: Spacing.space_16,
+    height: Spacing.space_148,
     justifyContent: 'space-between',
     overflow: 'hidden',
-    width: SPACING.space_335,
+    width: Spacing.space_335,
   },
   imageBackground: {
     height: '100%',
@@ -26,11 +26,11 @@ export const styles = StyleSheet.create<Styles>({
   imageHeadingContainer: {
     alignItems: 'center',
     justifyContent: 'center',
-    paddingHorizontal: SPACING.space_118,
-    paddingVertical: SPACING.space_8,
+    paddingHorizontal: Spacing.space_118,
+    paddingVertical: Spacing.space_8,
   },
   imageHeading: {
-    fontSize: SPACING.space_15,
+    fontSize: Spacing.space_15,
     fontFamily: Typography.secondary.bold,
   },
 })

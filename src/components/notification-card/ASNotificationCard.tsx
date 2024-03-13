@@ -1,15 +1,15 @@
 import { Text, View, Image } from 'react-native'
 
 import { calculateNotificationTime } from '../../utils/common-utils'
-import { NotificationData } from '../../types/notification-types'
+import { INotificationData } from '../../types/notification-types'
 import { COLORS } from '../../theme/colors'
 import { ResizeMode } from '../../constants/common-constants'
 
 import { imagePaths } from '../../constants/notification-constants'
 
-import { styles } from './NotificationCard-styles'
+import { styles } from './asNotificationCard-styles'
 
-const NotificationCard = ({ item }: { item: NotificationData }) => {
+export const ASNotificationCard = ({ item }: { item: INotificationData }) => {
   const backgroundColor: string = item.isStatusComplete ? COLORS.primary[50] : COLORS.white
 
   return (
@@ -26,5 +26,3 @@ const NotificationCard = ({ item }: { item: NotificationData }) => {
     </View>
   )
 }
-
-export default NotificationCard

@@ -3,9 +3,9 @@ import { Text, View, Image } from 'react-native'
 
 import { ResizeMode } from '../../constants/common-constants'
 
-import { styles } from './EmptyCard-styles'
+import { styles } from './asEmptyCard-styles'
 
-const EmptyCard = () => {
+export const ASEmptyCard = () => {
   return (
     <View style={styles.container}>
       <Image
@@ -23,5 +23,3 @@ const EmptyCard = () => {
     </View>
   )
 }
-
-export default EmptyCard

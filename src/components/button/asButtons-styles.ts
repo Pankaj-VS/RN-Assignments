@@ -1,36 +1,36 @@
 import { StyleSheet, ViewStyle, TextStyle } from 'react-native'
 
-import { SPACING } from '../../theme/spacing'
+import { Spacing } from '../../theme/spacing'
 import { COLORS } from '../../theme/colors'
 import { Typography } from '../../theme/typography'
 
-interface Styles {
+interface IStyles {
   container: ViewStyle
   button: TextStyle
   text: TextStyle
 }
 
-export const styles = StyleSheet.create<Styles>({
+export const styles = StyleSheet.create<IStyles>({
   container: {
     flexDirection: 'row',
-    gap: SPACING.space_12,
-    marginTop: SPACING.space_86,
-    paddingHorizontal: SPACING.space_16,
-    paddingVertical: SPACING.space_12,
+    gap: Spacing.space_12,
+    marginTop: Spacing.space_86,
+    paddingHorizontal: Spacing.space_16,
+    paddingVertical: Spacing.space_12,
   },
   button: {
     alignItems: 'center',
     backgroundColor: COLORS.white,
-    borderRadius: SPACING.space_8,
+    borderRadius: Spacing.space_8,
     color: COLORS.tundora,
-    elevation: SPACING.space_8,
+    elevation: Spacing.space_8,
     justifyContent: 'center',
-    paddingHorizontal: SPACING.space_32,
-    paddingVertical: SPACING.space_11,
+    paddingHorizontal: Spacing.space_32,
+    paddingVertical: Spacing.space_11,
   },
   text: {
     color: COLORS.neutral[700],
     fontFamily: Typography.primary.medium,
-    fontSize: SPACING.space_12,
+    fontSize: Spacing.space_12,
   },
 })

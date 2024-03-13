@@ -1,10 +1,10 @@
 import { COLORS } from '../theme/colors'
 
-interface ExerciseCardInfoType {
+interface IExerciseCardInfoType {
   imageSource: number
   textColor: string
 }
-export const ExerciseCardInfo: { [key: string]: ExerciseCardInfoType } = {
+export const ExerciseCardInfo: { [key: string]: IExerciseCardInfoType } = {
   'Outer Ring': {
     imageSource: require('../assets/images/outerring.png'),
     textColor: COLORS.secondary[600],

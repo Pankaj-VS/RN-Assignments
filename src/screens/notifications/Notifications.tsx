@@ -1,20 +1,22 @@
 import React, { useState, useEffect } from 'react'
-import { FlatList, Text, View, Image } from 'react-native'
+import { FlatList, View } from 'react-native'
 
-import EmptyCard from '../../components/empty-card/EmptyCard'
-import NotificationCard from '../../components/notification-card/NotificationCard'
-import { NotificationData } from '../../types/notification-types'
-import { getData } from '../../services/service'
+import { ASEmptyCard } from '../../components/empty-card/ASEmptyCard'
+import { ASNotificationCard } from '../../components/notification-card/ASNotificationCard'
+import { INotificationData } from '../../types/notification-types'
+import { getNotifcationsExercisesData } from '../../services/api/get-notifcations-exercises-data'
+import { ASHeader } from '../../components/header/ASHeader'
 
+import { settingsImage } from '../../constants/common-constants'
 import { API } from '../../constants/api-constants'
 
 import { styles } from './notifications-styles'
 
-const Notifications = () => {
-  const [data, setData] = useState<NotificationData[]>([])
+export const Notifications = () => {
+  const [data, setData] = useState<INotificationData[]>([])
 
   const fetchNotificationsData = async () => {
-    const response = await getData(API.NOTIFICATIONS_API)
+    const response = await getNotifcationsExercisesData(API.NOTIFICATIONS_API)
     if (response.success) {
       setData(response.data)
     } else {
@@ -29,24 +31,15 @@ const Notifications = () => {
   return (
     <View style={styles.container}>
       <View style={styles.subContainer}>
-        <View style={styles.header}>
-          <View style={styles.imageContainer} />
-          <Text style={styles.title}>Notifications</Text>
-          <Image
-            source={require('../../assets/icons/setting.png')}
-            style={styles.imageContainer}
-            resizeMode="contain"
-          />
-        </View>
+        <ASHeader image={settingsImage} title="Notifications" />
         <FlatList
-          ListEmptyComponent={<EmptyCard />}
+          ListEmptyComponent={<ASEmptyCard />}
           style={styles.listContainer}
           data={data}
-          renderItem={({ item }) => <NotificationCard item={item} />}
+          renderItem={({ item }) => <ASNotificationCard item={item} />}
+          showsVerticalScrollIndicator={false}
         />
       </View>
     </View>
   )
 }
-
-export default Notifications

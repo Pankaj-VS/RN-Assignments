@@ -2,15 +2,16 @@ import React from 'react'
 import { Text, TouchableOpacity, View } from 'react-native'
 import LinearGradient from 'react-native-linear-gradient'
 
+import { COLORS } from '../../theme/colors'
+
 import { buttonsTime } from '../../constants/exercises-constants'
-import { exerciseCardButtonContainerGradient } from '../../theme/colors'
 
-import { styles } from './CustomButtons-styles'
+import { styles } from './asButtons-styles'
 
-export const CustomButtons = () => {
+export const ASButtons = () => {
   return (
     <LinearGradient
-      colors={exerciseCardButtonContainerGradient}
+      colors={COLORS.exerciseCardButtonContainerGradient}
       start={{ x: 0.5, y: 0 }}
       end={{ x: 0.5, y: 1 }}
       style={styles.container}>

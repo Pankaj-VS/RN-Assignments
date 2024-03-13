@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from 'react'
-import { FlatList, Text, View } from 'react-native'
+import { FlatList, View } from 'react-native'
 
-import { ExerciseCard } from '../../components/exercise-card/ExerciseCard'
-import { ExerciseData } from '../../types/exercise-types'
-import { getData } from '../../services/service'
+import { ASExerciseCard } from '../../components/exercise-card/ASExerciseCard'
+import { IExerciseData } from '../../types/exercise-types'
+import { getNotifcationsExercisesData } from '../../services/api/get-notifcations-exercises-data'
+import { ASHeader } from '../../components/header/ASHeader'
 
 import { API } from '../../constants/api-constants'
 
 import { styles } from './exercises-styles'
 
 export const Exercises = () => {
-  const [exerciseData, setExerciseData] = useState<ExerciseData[]>([])
+  const [exerciseData, setExerciseData] = useState<IExerciseData[]>([])
 
   const fetchExerciseData = async () => {
-    const response = await getData(API.EXCERISES_API)
+    const response = await getNotifcationsExercisesData(API.EXERCISES_API)
     if (response.success) {
       setExerciseData(response.data)
     } else {
@@ -27,14 +28,12 @@ export const Exercises = () => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
-        <Text style={styles.text}>D-active</Text>
-      </View>
+      <ASHeader title="D-active" />
       <FlatList
         data={exerciseData}
         renderItem={({ item }) => (
           <View style={styles.subContainer}>
-            <ExerciseCard name={item.name} />
+            <ASExerciseCard name={item.name} />
           </View>
         )}
         showsVerticalScrollIndicator={false}

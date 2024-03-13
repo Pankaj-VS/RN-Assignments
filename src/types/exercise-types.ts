@@ -1,3 +1,3 @@
-export interface ExerciseData {
+export interface IExerciseData {
   name: string
 }

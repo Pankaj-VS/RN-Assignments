@@ -2,19 +2,19 @@ import React from 'react'
 import { Text, View, ImageBackground } from 'react-native'
 import LinearGradient from 'react-native-linear-gradient'
 
-import { CustomButtons } from '../custom-button/CustomButtons'
-import { exerciseCardTitleContainerGradient } from '../../theme/colors'
-import { ResizeMode } from '../../constants/common-constants'
+import { ASButtons } from '../button/ASButtons'
+import { COLORS } from '../../theme/colors'
 
+import { ResizeMode } from '../../constants/common-constants'
 import { ExerciseCardInfo } from '../../constants/exercises-constants'
 
-import { styles } from './ExerciseCard-styles'
+import { styles } from './asExerciseCard-styles'
 
-interface CardType {
+interface IASExerciseCardProps {
   name: string
 }
 
-export const ExerciseCard = ({ name }: CardType) => {
+export const ASExerciseCard = ({ name }: IASExerciseCardProps) => {
   const txtColor: string = ExerciseCardInfo[name].textColor
   const imgSource: number = ExerciseCardInfo[name].imageSource
   return (
@@ -24,13 +24,13 @@ export const ExerciseCard = ({ name }: CardType) => {
         resizeMode={ResizeMode.contain}
         style={styles.imageBackground}>
         <LinearGradient
-          colors={exerciseCardTitleContainerGradient}
+          colors={COLORS.exerciseCardTitleContainerGradient}
           locations={[0, 0.8792, 1]}
           style={styles.imageHeadingContainer}>
           <Text style={[styles.imageHeading, { color: txtColor }]}>{name}</Text>
         </LinearGradient>
       </ImageBackground>
-      <CustomButtons />
+      <ASButtons />
     </View>
   )
 }

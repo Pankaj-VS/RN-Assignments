@@ -4,15 +4,14 @@ const Colors = {
   primary: palette.green,
   secondary: palette.pink,
   accent: palette.yellow,
-  neutral: palette.neutral,
-  failure: palette.failure,
-  success: palette.success,
+  neutral: palette.shark,
+  failure: palette.punch,
+  success: palette.genoa,
   white: palette.white,
   tundora: palette.tundora,
-  black: palette.black,
+  dark: palette.black,
+  exerciseCardButtonContainerGradient : palette.exerciseCardButtonGradient,
+  exerciseCardTitleContainerGradient : palette.exerciseCardTitleGradient
 }
 
 export const COLORS = Colors
-
-export const exerciseCardButtonContainerGradient = ['#FFFFFF00', '#FFFFFFCC']
-export const exerciseCardTitleContainerGradient = ['#FFFFFF8F', '#FFFFFF1E', '#FFFFFF00']

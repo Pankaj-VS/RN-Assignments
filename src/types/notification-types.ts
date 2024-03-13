@@ -1,4 +1,4 @@
-export interface NotificationData {
+export interface INotificationData {
   imageName: string
   notification: string
   isStatusComplete: boolean

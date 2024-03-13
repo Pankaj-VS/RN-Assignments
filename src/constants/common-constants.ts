@@ -5,3 +5,5 @@ export enum ResizeMode {
   repeat = 'repeat',
   center = 'center',
 }
+
+export const settingsImage = require('../assets/icons/setting.png')
