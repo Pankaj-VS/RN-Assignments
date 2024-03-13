@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FlatList, View } from 'react-native'
 
 import { ASEmptyCard } from '../../components/empty-card/ASEmptyCard'
-import { ASNotificationCard } from '../../components/notification-card/ASNotificationCard'
-import { INotificationData } from '../../types/notification-types'
-import { getNotifcationsExercisesData } from '../../services/api/get-notifcations-exercises-data'
 import { ASHeader } from '../../components/header/ASHeader'
+import { ASNotificationCard } from '../../components/notification-card/ASNotificationCard'
+import { getNotifcationsExercisesData } from '../../services/api/get-notifcations-exercises-data'
+import { INotificationData } from '../../types/notification-types'
 
-import { settingsImage } from '../../constants/common-constants'
 import { API } from '../../constants/api-constants'
+import { settingsImage } from '../../constants/common-constants'
 
 import { styles } from './notifications-styles'
 

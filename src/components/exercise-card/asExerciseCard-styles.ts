@@ -1,4 +1,4 @@
-import { StyleSheet, ViewStyle, TextStyle } from 'react-native'
+import { StyleSheet, TextStyle, ViewStyle } from 'react-native'
 
 import { Spacing } from '../../theme/spacing'
 import { Typography } from '../../theme/typography'

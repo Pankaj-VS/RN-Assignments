@@ -1,8 +1,8 @@
 import React from 'react'
-import { Text, View, Image } from 'react-native'
+import { Image, Text, View } from 'react-native'
 
-import { styles } from './asHeader-styles'
 import { ResizeMode } from '../../constants/common-constants'
+import { styles } from './asHeader-styles'
 
 interface IASHeaderProps {
   image?: number

@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FlatList, View } from 'react-native'
 
 import { ASExerciseCard } from '../../components/exercise-card/ASExerciseCard'
-import { IExerciseData } from '../../types/exercise-types'
-import { getNotifcationsExercisesData } from '../../services/api/get-notifcations-exercises-data'
 import { ASHeader } from '../../components/header/ASHeader'
+import { getNotifcationsExercisesData } from '../../services/api/get-notifcations-exercises-data'
+import { IExerciseData } from '../../types/exercise-types'
 
 import { API } from '../../constants/api-constants'
 

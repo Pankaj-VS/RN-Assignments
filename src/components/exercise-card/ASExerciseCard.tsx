@@ -1,9 +1,9 @@
 import React from 'react'
-import { Text, View, ImageBackground } from 'react-native'
+import { ImageBackground, Text, View } from 'react-native'
 import LinearGradient from 'react-native-linear-gradient'
 
-import { ASButtons } from '../button/ASButtons'
 import { COLORS } from '../../theme/colors'
+import { ASButtons } from '../button/ASButtons'
 
 import { ResizeMode } from '../../constants/common-constants'
 import { ExerciseCardInfo } from '../../constants/exercises-constants'

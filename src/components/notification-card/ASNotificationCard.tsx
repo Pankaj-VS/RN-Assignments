@@ -1,9 +1,9 @@
-import { Text, View, Image } from 'react-native'
+import { Image, Text, View } from 'react-native'
 
-import { calculateNotificationTime } from '../../utils/common-utils'
-import { INotificationData } from '../../types/notification-types'
-import { COLORS } from '../../theme/colors'
 import { ResizeMode } from '../../constants/common-constants'
+import { COLORS } from '../../theme/colors'
+import { INotificationData } from '../../types/notification-types'
+import { calculateNotificationTime } from '../../utils/common-utils'
 
 import { imagePaths } from '../../constants/notification-constants'
 
