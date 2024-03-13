@@ -1,12 +1,13 @@
-import {StyleSheet, ViewStyle, TextStyle} from 'react-native';
-import {SPACING} from '../../theme/spacing';
-import {COLORS} from '../../theme/colors';
-import {FONT_FAMILY} from '../../theme/typography';
+import { StyleSheet, ViewStyle, TextStyle } from 'react-native'
+
+import { SPACING } from '../../theme/spacing'
+import { COLORS } from '../../theme/colors'
+import { Typography } from '../../theme/typography'
 
 interface Styles {
-  container: ViewStyle;
-  button: TextStyle;
-  text: TextStyle;
+  container: ViewStyle
+  button: TextStyle
+  text: TextStyle
 }
 
 export const styles = StyleSheet.create<Styles>({
@@ -19,17 +20,17 @@ export const styles = StyleSheet.create<Styles>({
   },
   button: {
     alignItems: 'center',
-    backgroundColor: COLORS.neutralWhite,
+    backgroundColor: COLORS.white,
     borderRadius: SPACING.space_8,
-    color: COLORS.Tundora,
+    color: COLORS.tundora,
     elevation: SPACING.space_8,
     justifyContent: 'center',
     paddingHorizontal: SPACING.space_32,
     paddingVertical: SPACING.space_11,
   },
   text: {
-    color: COLORS.neutral700,
-    fontFamily: FONT_FAMILY.quickSandMedium,
+    color: COLORS.neutral[700],
+    fontFamily: Typography.primary.medium,
     fontSize: SPACING.space_12,
   },
-});
+})

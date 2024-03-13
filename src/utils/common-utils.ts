@@ -1,33 +1,35 @@
+import moment from 'moment'
+
 export const calculateNotificationTime = (timeOfCreation: string): string => {
-  const creationTimestamp = new Date(timeOfCreation).getTime();
-  const currentTimestamp = Date.now();
-  const difference = currentTimestamp - creationTimestamp;
+  const creationTime = moment(timeOfCreation)
+  const now = moment()
+  const duration = moment.duration(now.diff(creationTime))
 
-  const secondsDifference = Math.floor(difference / 1000);
+  const seconds = duration.asSeconds()
+  const minutes = duration.asMinutes()
+  const hours = duration.asHours()
+  const days = duration.asDays()
+  const weeks = duration.asWeeks()
+  const months = duration.asMonths()
+  const years = duration.asYears()
 
-  const MINUTE_DURATION = 60;
-  const HOUR_DURATION = 3600;
-  const DAY_DURATION = 86400;
-  const WEEK_DURATION = 604800;
-  const MONTH_DURATION = 2592000;
-  const YEAR_DURATION = 31536000;
+  let notificationTime: string = ''
 
-  let notificationTime: string = '';
-
-  if (secondsDifference < MINUTE_DURATION) {
-    notificationTime = `${secondsDifference}s`;
-  } else if (secondsDifference < HOUR_DURATION) {
-    notificationTime = `${Math.floor(secondsDifference / MINUTE_DURATION)}m`;
-  } else if (secondsDifference < DAY_DURATION) {
-    notificationTime = `${Math.floor(secondsDifference / HOUR_DURATION)}h`;
-  } else if (secondsDifference < WEEK_DURATION) {
-    notificationTime = `${Math.floor(secondsDifference / DAY_DURATION)}d`;
-  } else if (secondsDifference < MONTH_DURATION) {
-    notificationTime = `${Math.floor(secondsDifference / WEEK_DURATION)}w`;
-  } else if (secondsDifference < YEAR_DURATION) {
-    notificationTime = `${Math.floor(secondsDifference / MONTH_DURATION)}mo`;
+  if (seconds < 60) {
+    notificationTime = `${Math.floor(seconds)}s`
+  } else if (minutes < 60) {
+    notificationTime = `${Math.floor(minutes)}m`
+  } else if (hours < 24) {
+    notificationTime = `${Math.floor(hours)}h`
+  } else if (days < 7) {
+    notificationTime = `${Math.floor(days)}d`
+  } else if (weeks < 4) {
+    notificationTime = `${Math.floor(weeks)}w`
+  } else if (months < 12) {
+    notificationTime = `${Math.floor(months)}mo`
   } else {
-    notificationTime = `${Math.floor(secondsDifference / YEAR_DURATION)}y`;
+    notificationTime = `${Math.floor(years)}y`
   }
-  return notificationTime;
-};
+
+  return notificationTime
+}

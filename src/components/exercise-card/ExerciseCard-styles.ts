@@ -1,13 +1,13 @@
-import {StyleSheet, ViewStyle, TextStyle} from 'react-native';
+import { StyleSheet, ViewStyle, TextStyle } from 'react-native'
 
-import {SPACING} from '../../theme/spacing';
-import {FONT_FAMILY} from '../../theme/typography';
+import { SPACING } from '../../theme/spacing'
+import { Typography } from '../../theme/typography'
 
 interface Styles {
-  container: ViewStyle;
-  imageBackground: ViewStyle;
-  imageHeadingContainer: ViewStyle;
-  imageHeading: TextStyle;
+  container: ViewStyle
+  imageBackground: ViewStyle
+  imageHeadingContainer: ViewStyle
+  imageHeading: TextStyle
 }
 
 export const styles = StyleSheet.create<Styles>({
@@ -31,6 +31,6 @@ export const styles = StyleSheet.create<Styles>({
   },
   imageHeading: {
     fontSize: SPACING.space_15,
-    fontFamily: FONT_FAMILY.fraunces,
+    fontFamily: Typography.secondary.bold,
   },
-});
+})

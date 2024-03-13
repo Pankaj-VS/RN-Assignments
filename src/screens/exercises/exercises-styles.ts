@@ -1,15 +1,14 @@
-import {StyleSheet, ViewStyle, TextStyle} from 'react-native';
+import { StyleSheet, ViewStyle, TextStyle } from 'react-native'
 
-import {SPACING} from '../../theme/spacing';
-import {COLORS} from '../../theme/colors';
-import {FONT_FAMILY} from '../../theme/typography';
+import { SPACING } from '../../theme/spacing'
+import { COLORS } from '../../theme/colors'
+import { Typography } from '../../theme/typography'
 
 interface Styles {
-  container: ViewStyle;
-  header: ViewStyle;
-  text: TextStyle;
-  cardsContainer: ViewStyle;
-  subContainer: ViewStyle;
+  container: ViewStyle
+  header: ViewStyle
+  text: TextStyle
+  subContainer: ViewStyle
 }
 
 export const styles = StyleSheet.create<Styles>({
@@ -24,17 +23,12 @@ export const styles = StyleSheet.create<Styles>({
   },
   text: {
     fontSize: SPACING.space_18,
-    fontFamily: FONT_FAMILY.fraunces,
-    color: COLORS.neutral700,
-  },
-  cardsContainer: {
-    paddingVertical: SPACING.space_24,
-    paddingHorizontal: SPACING.space_24,
-    flex: SPACING.space_1,
+    fontFamily: Typography.secondary.bold,
+    color: COLORS.neutral[700],
   },
   subContainer: {
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: SPACING.space_24,
   },
-});
+})

@@ -1,16 +1,16 @@
-import {StyleSheet, ViewStyle, TextStyle, ImageStyle} from 'react-native';
+import { StyleSheet, ViewStyle, TextStyle, ImageStyle } from 'react-native'
 
-import {SPACING} from '../../theme/spacing';
-import {FONT_FAMILY} from '../../theme/typography';
-import {COLORS} from '../../theme/colors';
+import { SPACING } from '../../theme/spacing'
+import { Typography } from '../../theme/typography'
+import { COLORS } from '../../theme/colors'
 
 interface Styles {
-  container: ViewStyle;
-  imageContainer: ImageStyle;
-  contentContainer: ViewStyle;
-  headingContainer: TextStyle;
-  subHeadingContainer: ViewStyle;
-  subHeading: TextStyle;
+  container: ViewStyle
+  imageContainer: ImageStyle
+  textContentContainer: ViewStyle
+  textContainer: TextStyle
+  subTextContainer: ViewStyle
+  subText: TextStyle
 }
 
 export const styles = StyleSheet.create<Styles>({
@@ -18,7 +18,6 @@ export const styles = StyleSheet.create<Styles>({
     alignItems: 'center',
     flex: SPACING.space_1,
     gap: SPACING.space_27,
-    justifyContent: 'center',
     marginHorizontal: SPACING.space_20,
     marginTop: SPACING.space_184,
   },
@@ -26,23 +25,23 @@ export const styles = StyleSheet.create<Styles>({
     height: SPACING.space_154,
     width: SPACING.space_154,
   },
-  contentContainer: {
+  textContentContainer: {
     alignItems: 'center',
     gap: SPACING.space_8,
     justifyContent: 'center',
   },
-  headingContainer: {
-    color: COLORS.Tundora,
-    fontFamily: FONT_FAMILY.fraunces,
+  textContainer: {
+    color: COLORS.tundora,
+    fontFamily: Typography.secondary.bold,
     fontSize: SPACING.space_24,
   },
-  subHeadingContainer: {
+  subTextContainer: {
     alignItems: 'center',
     justifyContent: 'center',
   },
-  subHeading: {
-    color: COLORS.neutral700,
-    fontFamily: FONT_FAMILY.quickSandMedium,
+  subText: {
+    color: COLORS.neutral[700],
+    fontFamily: Typography.primary.medium,
     fontSize: SPACING.space_16,
   },
-});
+})

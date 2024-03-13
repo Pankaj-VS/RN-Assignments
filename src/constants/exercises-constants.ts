@@ -1,9 +1,30 @@
-export const imagePaths: {[key: string]: number} = {
-  'Outer Ring': require('../assets/images/outerring.png'),
-  'Focus': require('../assets/images/focus.png'),
-  'Follow': require('../assets/images/follow.png'),
-  'Scan': require('../assets/images/scan.png'),
-  'Square': require('../assets/images/square.png'),
-};
+import { COLORS } from '../theme/colors'
 
-export const buttonsTime: number[] = [2, 4, 8];
+interface ExerciseCardInfoType {
+  imageSource: number
+  textColor: string
+}
+export const ExerciseCardInfo: { [key: string]: ExerciseCardInfoType } = {
+  'Outer Ring': {
+    imageSource: require('../assets/images/outerring.png'),
+    textColor: COLORS.secondary[600],
+  },
+  'Focus': {
+    imageSource: require('../assets/images/focus.png'),
+    textColor: COLORS.primary[700],
+  },
+  'Follow': {
+    imageSource: require('../assets/images/follow.png'),
+    textColor: COLORS.neutral[600],
+  },
+  'Scan': {
+    imageSource: require('../assets/images/scan.png'),
+    textColor: COLORS.accent[700],
+  },
+  'Square': {
+    imageSource: require('../assets/images/square.png'),
+    textColor: COLORS.primary[700],
+  },
+}
+
+export const buttonsTime: number[] = [2, 4, 8]

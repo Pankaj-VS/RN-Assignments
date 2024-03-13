@@ -1,32 +1,32 @@
 interface Spacing {
-  space_0: number;
-  space_1: number;
-  space_2: number;
-  space_4: number;
-  space_8: number;
-  space_11: number;
-  space_12: number;
-  space_14: number;
-  space_15: number;
-  space_16: number;
-  space_17: number;
-  space_18: number;
-  space_20: number;
-  space_24: number;
-  space_27: number;
-  space_28: number;
-  space_32: number;
-  space_48: number;
-  space_64: number;
-  space_76: number;
-  space_86: number;
-  space_93: number;
-  space_118: number;
-  space_148: number;
-  space_154: number;
-  space_184: number;
-  space_200: number;
-  space_335: number;
+  space_0: number
+  space_1: number
+  space_2: number
+  space_4: number
+  space_8: number
+  space_11: number
+  space_12: number
+  space_14: number
+  space_15: number
+  space_16: number
+  space_17: number
+  space_18: number
+  space_20: number
+  space_24: number
+  space_27: number
+  space_28: number
+  space_32: number
+  space_48: number
+  space_64: number
+  space_76: number
+  space_86: number
+  space_93: number
+  space_118: number
+  space_148: number
+  space_154: number
+  space_184: number
+  space_200: number
+  space_335: number
 }
 
 export const SPACING: Spacing = {
@@ -58,4 +58,4 @@ export const SPACING: Spacing = {
   space_184: 184,
   space_200: 200,
   space_335: 335,
-};
+}

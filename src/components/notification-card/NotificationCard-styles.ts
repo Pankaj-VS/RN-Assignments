@@ -1,19 +1,19 @@
-import {StyleSheet, ViewStyle, TextStyle, ImageStyle} from 'react-native';
+import { StyleSheet, ViewStyle, TextStyle, ImageStyle } from 'react-native'
 
-import {SPACING} from '../../theme/spacing';
-import {COLORS} from '../../theme/colors';
-import {FONT_FAMILY} from '../../theme/typography';
+import { SPACING } from '../../theme/spacing'
+import { COLORS } from '../../theme/colors'
+import { Typography } from '../../theme/typography'
 
 interface Styles {
-  container: ViewStyle;
-  notificationSubContainer: ViewStyle;
-  imageBody: ImageStyle;
-  textBody: TextStyle;
-  creationTime: ViewStyle;
+  container: ViewStyle
+  notificationSubContainer: ViewStyle
+  imageBody: ImageStyle
+  textBody: TextStyle
+  creationTime: ViewStyle
 }
 export const styles = StyleSheet.create<Styles>({
   container: {
-    borderBottomColor: COLORS.neutral100,
+    borderBottomColor: COLORS.neutral[100],
     borderBottomWidth: SPACING.space_1,
     gap: SPACING.space_4,
     justifyContent: 'space-between',
@@ -29,11 +29,11 @@ export const styles = StyleSheet.create<Styles>({
   },
   textBody: {
     color: COLORS.black,
-    fontFamily: FONT_FAMILY.quickSandMedium,
+    fontFamily: Typography.primary.medium,
     fontSize: SPACING.space_14,
     paddingHorizontal: SPACING.space_20,
   },
   creationTime: {
     paddingHorizontal: SPACING.space_76,
   },
-});
+})

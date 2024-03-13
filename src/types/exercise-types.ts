@@ -1,3 +1,3 @@
 export interface ExerciseData {
-  name: string;
+  name: string
 }
