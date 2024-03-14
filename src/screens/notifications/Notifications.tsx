@@ -36,7 +36,7 @@ export const Notifications = () => {
           ListEmptyComponent={<ASEmptyCard />}
           style={styles.listContainer}
           data={data}
-          renderItem={({ item }) => <ASNotificationCard item={item} />}
+          renderItem={({ item }) => <ASNotificationCard {...item} />}
           showsVerticalScrollIndicator={false}
         />
       </View>

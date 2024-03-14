@@ -2,8 +2,8 @@ import React from 'react'
 import { ImageBackground, Text, View } from 'react-native'
 import LinearGradient from 'react-native-linear-gradient'
 
-import { COLORS } from '../../theme/colors'
 import { ASButtons } from '../button/ASButtons'
+import { COLORS } from '../../theme/colors'
 
 import { ResizeMode } from '../../constants/common-constants'
 import { ExerciseCardInfo } from '../../constants/exercises-constants'
@@ -25,7 +25,7 @@ export const ASExerciseCard = ({ name }: IASExerciseCardProps) => {
         style={styles.imageBackground}>
         <LinearGradient
           colors={COLORS.exerciseCardTitleContainerGradient}
-          locations={[0, 0.8792, 1]}
+          locations={[0, 0.87, 1]}
           style={styles.imageHeadingContainer}>
           <Text style={[styles.imageHeading, { color: txtColor }]}>{name}</Text>
         </LinearGradient>

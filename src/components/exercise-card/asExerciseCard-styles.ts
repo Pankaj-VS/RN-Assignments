@@ -1,11 +1,11 @@
-import { StyleSheet, TextStyle, ViewStyle } from 'react-native'
+import { ImageStyle, StyleSheet, TextStyle, ViewStyle } from 'react-native'
 
 import { Spacing } from '../../theme/spacing'
 import { Typography } from '../../theme/typography'
 
 interface IStyles {
   container: ViewStyle
-  imageBackground: ViewStyle
+  imageBackground: ImageStyle
   imageHeadingContainer: ViewStyle
   imageHeading: TextStyle
 }

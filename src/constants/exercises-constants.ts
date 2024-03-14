@@ -6,7 +6,7 @@ interface IExerciseCardInfoType {
 }
 export const ExerciseCardInfo: { [key: string]: IExerciseCardInfoType } = {
   'Outer Ring': {
-    imageSource: require('../assets/images/outerring.png'),
+    imageSource: require('../assets/images/outerRing.png'),
     textColor: COLORS.secondary[600],
   },
   'Focus': {

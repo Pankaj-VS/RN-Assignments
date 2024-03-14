@@ -1,9 +1,7 @@
 export const getNotifcationsExercisesData = async (url: string) => {
   try {
     const res = await fetch(url)
-
     const data = await res.json()
-
     return {
       success: true,
       data: data,

@@ -7,3 +7,5 @@ export enum ResizeMode {
 }
 
 export const settingsImage = require('../assets/icons/setting.png')
+
+export const showNotificationPage: boolean = true

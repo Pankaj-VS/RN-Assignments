@@ -12,7 +12,7 @@ export const palette = {
   pink: {
     '50': '#FDF2F7',
     '100': '#FBE8F2',
-    '200': '#FADOE5',
+    '200': '#FAD0E5',
     '300': '#F7AACE',
     '400': '#F175AC',
     '500': '#E84C8D',
