@@ -1,4 +1,5 @@
 import { SafeAreaView } from 'react-native'
+import { NavigationContainer } from '@react-navigation/native'
 
 import { showNotificationPage } from './src/constants/common-constants.ts'
 import { Exercises } from './src/screens/exercises/Exercises.tsx'
@@ -8,9 +9,11 @@ import { styles } from './app-styles.ts'
 
 const App = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      {showNotificationPage ? <Notifications /> : <Exercises />}
-    </SafeAreaView>
+    <NavigationContainer>
+      <SafeAreaView style={styles.container}>
+        {showNotificationPage ? <Notifications /> : <Exercises />}
+      </SafeAreaView>
+    </NavigationContainer>
   )
 }
 
