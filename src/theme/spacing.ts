@@ -16,6 +16,7 @@ export enum Spacing {
   space_27 = 27,
   space_28 = 28,
   space_32 = 32,
+  space_44=44,
   space_48 = 48,
   space_64 = 64,
   space_76 = 76,

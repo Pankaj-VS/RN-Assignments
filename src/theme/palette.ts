@@ -45,4 +45,6 @@ export const palette = {
   black: '#000000',
   exerciseCardButtonGradient: ['#FFFFFF00', '#FFFFFFCC'],
   exerciseCardTitleGradient: ['#FFFFFF8F', '#FFFFFF1E', '#FFFFFF00'],
+  audioButtonShadow: '#4B4B4B',
+
 }
