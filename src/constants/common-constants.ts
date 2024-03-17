@@ -7,5 +7,9 @@ export enum ResizeMode {
 }
 
 export const settingsImage = require('../assets/icons/setting.png')
+export const leftIcon = require('../assets/icons/leftIcon.png')
+export const rightIcon = require('../assets/icons/rightIcon.png')
+export const bgImg = require('../assets/images/myReflection.png')
+export const leftIconWhite = require('../assets/icons/leftIconWhite.png')
 
 export const showNotificationPage: boolean = true
