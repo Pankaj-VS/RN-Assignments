@@ -9,11 +9,11 @@ interface IStyles {
   headingText: TextStyle
   headingContainer: ViewStyle
   container: ViewStyle
-  SubdetailsText: TextStyle
-  SubdetailsContainer: ViewStyle
+  SubDetailsText: TextStyle
+  SubDetailsContainer: ViewStyle
 }
 export const styles = StyleSheet.create<IStyles>({
-  SubdetailsText: {
+  SubDetailsText: {
     color: COLORS.white,
     fontFamily: Typography.primary.bold,
     fontSize: Spacing.space_14,
@@ -26,7 +26,7 @@ export const styles = StyleSheet.create<IStyles>({
     marginVertical: Spacing.space_4,
     width: Spacing.space_4,
   },
-  SubdetailsContainer: {
+  SubDetailsContainer: {
     alignItems: 'center',
     flexDirection: 'row',
     gap: Spacing.space_4,

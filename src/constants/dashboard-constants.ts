@@ -1,20 +1,25 @@
 import { COLORS } from '../theme/colors'
 
-const overthinkerGrey = require('../assets/icons/overthinkerGrey.png')
-const dActive = require('../assets/images/dActive.png')
-const reflection = require('../assets/images/reflection.png')
-const reminder = require('../assets/images/reminder.png')
-export interface IChallengeDeatilsCard {
-  img: any
+export const completedIcon = require('../../assets/icons/complete.png')
+export const markedFavouriteIcon = require('../../assets/icons/markedFavourite.png')
+export const notMarkedFavouriteIcon = require('../../assets/icons/notMarkedFavourite.png')
+export const audioIcon = require('../../assets/icons/audio.png')
+
+export const overthinkerGrey = require('../assets/icons/overthinkerGrey.png')
+export const dActive = require('../assets/images/dActive.png')
+export const reflection = require('../assets/images/reflection.png')
+export const reminder = require('../assets/images/reminder.png')
+export interface IChallengeDetailsCard {
+  image: any
   subheading: string
   heading: string
-  timmingDetails: string
+  timingDetails: string
   iscompleted: boolean
   isfavourateMarked: boolean
   backgroundColor: string
 }
 
-export interface IChallengeDeatil {
+export interface IChallengeDetail {
   id: number
   title: string
   isFav: boolean
@@ -23,21 +28,21 @@ export interface IChallengeDeatil {
   isCompleted: boolean
 }
 
-export const masteryCardDetails: IChallengeDeatilsCard = {
-  img: require('../assets/icons/overthinkerGrey.png'),
+export const masteryCardDetails: IChallengeDetailsCard = {
+  image: require('../assets/icons/overthinkerGrey.png'),
   subheading: 'Listen',
   heading: 'Mastery of the day',
-  timmingDetails: '6am to 9am',
+  timingDetails: '6am to 9am',
   iscompleted: true,
   isfavourateMarked: true,
   backgroundColor: COLORS.primary[50],
 }
 
-export interface IChallengeDeatilsCardProps {
-  img: any
+export interface IChallengeDetailsCardProps {
+  image: any
   subheading: string
   heading: string
-  timmingDetails: string
+  timingDetails: string
   iscompleted: boolean
   isfavourateMarked: boolean
   backgroundColor: string
@@ -49,7 +54,7 @@ export enum imageDetails {
   'Reflection of the day' = reminder,
 }
 
-export interface IChallengeDeatilsCardProps {
+export interface IChallengeDetailsCardProps {
   id: number
   title: string
   isFav: string
@@ -66,3 +71,8 @@ export const backgroundColorDetails: BackgroundColorDetails = {
   'Reminder of the day': COLORS.accent[100],
   'Reflection of the day': COLORS.primary[100],
 }
+
+
+export const headerBackground = require('../../assets/images/dashboardHeaderBackground.png')
+export const calendarImage = require('../../assets/icons/calendar.png')
+export const overthinkerImage = require('../../assets/icons/overthinkerWhite.png')

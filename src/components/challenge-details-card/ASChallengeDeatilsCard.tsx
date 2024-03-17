@@ -1,32 +1,31 @@
-const audio = require('../../assets/icons/audio.png')
-const completedIcon = require('../../assets/icons/complete.png')
-const markedFavourite = require('../../assets/icons/markedFavourite.png')
-const notmMarkedFavourite = require('../../assets/icons/notMarkedFavourite.png')
+
 import React from 'react'
 import { Image, Text, View } from 'react-native'
+
 import {
-  IChallengeDeatilsCardProps,
+  IChallengeDetailsCardProps,
   backgroundColorDetails,
   imageDetails,
 } from '../../constants/dashboard-constants'
-import { styles } from './asChallenge-details-card-style'
+import { audioIcon, completedIcon, markedFavouriteIcon, notMarkedFavouriteIcon } from '../../constants/dashboard-constants'
 
-const ChallengeDeatilsCard = ({ ChallengeDeatils }: IChallengeDeatilsCardProps) => {
-  const { id, title, isFav, startingTime, endingTime, isCompleted } = ChallengeDeatils
+import { styles } from './asChallengeDetailsCard-style'
+
+const ChallengeDetailsCard = ({ ChallengeDetails }: IChallengeDetailsCardProps) => {
+  const { id, title, isFav, startingTime, endingTime, isCompleted } = ChallengeDetails
 
   return (
     <View style={[styles.container, { backgroundColor: backgroundColorDetails[title] }]}>
       <View style={styles.imageContainer}>
         <View style={styles.imageBackgroundContainer}>
-          <Image style={styles.overThinkerGrey} source={imageDetails[title]} />
+          <Image style={styles.overThinkerBackgroundImage} source={imageDetails[title]} />
         </View>
       </View>
       <View style={styles.detailsContainer}>
-        <View style={styles.detailsSubContainer}>
-          <View style={styles.detailsMainContainer}>
+        <View >
+          <View style={styles.detailsSubContainer}>
             <View style={styles.details}>
               <Text style={styles.listenTitle}>Challenge {id}</Text>
-              {/* {console.log(isCompleted)} */}
               {isCompleted === 'true' ? (
                 <Image style={styles.completedIcon} source={completedIcon} />
               ) : (
@@ -35,9 +34,9 @@ const ChallengeDeatilsCard = ({ ChallengeDeatils }: IChallengeDeatilsCardProps) 
             </View>
             <View>
               {isFav === 'true' ? (
-                <Image style={styles.starIcon} source={markedFavourite} />
+                <Image style={styles.starIcon} source={markedFavouriteIcon} />
               ) : (
-                <Image style={styles.starIcon} source={notmMarkedFavourite} />
+                <Image style={styles.starIcon} source={notMarkedFavouriteIcon} />
               )}
             </View>
           </View>
@@ -49,7 +48,7 @@ const ChallengeDeatilsCard = ({ ChallengeDeatils }: IChallengeDeatilsCardProps) 
             {startingTime} to {endingTime}
           </Text>
           <View style={styles.audioIconBackground}>
-            <Image style={styles.audioIcon} source={audio} />
+            <Image style={styles.audioIcon} source={audioIcon} />
           </View>
         </View>
       </View>
@@ -57,4 +56,4 @@ const ChallengeDeatilsCard = ({ ChallengeDeatils }: IChallengeDeatilsCardProps) 
   )
 }
 
-export default ChallengeDeatilsCard
+export default ChallengeDetailsCard

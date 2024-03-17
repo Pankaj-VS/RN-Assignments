@@ -34,7 +34,7 @@ export const calculateNotificationTime = (timeOfCreation: string): string => {
   return notificationTime
 }
 
-export const getTodayDate = (): string => {
+export const getCurrentDayDate = (): string => {
   const date = moment()
   const formattedDate: string = date.format('DD MMM YYYY')
   const day: number = parseInt(formattedDate.slice(0, 2), 10)

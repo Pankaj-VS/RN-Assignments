@@ -7,7 +7,7 @@ interface IStyles {
   cardContainer: ViewStyle
   detailsContainer: ViewStyle
   detailsSubContainer: ViewStyle
-  image: ImageStyle
+  wreckerImage: ImageStyle
   imageContainer: ViewStyle
   progressBar: ViewStyle
   progressBarContainer: ViewStyle
@@ -65,7 +65,7 @@ export const styles = StyleSheet.create<IStyles>({
   cardContainer: {
     gap: Spacing.space_8,
   },
-  image: {
+  wreckerImage: {
     height: Spacing.space_50,
     resizeMode: 'cover',
     width: Spacing.space_60,

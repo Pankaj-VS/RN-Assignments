@@ -9,7 +9,7 @@ interface IStyles {
   dateDetailsContainer: ViewStyle
   dateDetailsSubContainer: ViewStyle
   dayCounterDetails: TextStyle
-  overThinkeText: TextStyle
+  overThinkerText: TextStyle
   overThinkerImage: ImageStyle
   overThinkerImageContainer: ViewStyle
   overthinkerDetailsContainer: ViewStyle
@@ -25,7 +25,7 @@ export const styles = StyleSheet.create<IStyles>({
     color: COLORS.white,
     fontFamily: Typography.primary.bold,
   },
-  overThinkeText: {
+  overThinkerText: {
     color: COLORS.white,
     fontFamily: Typography.secondary.bold,
     fontSize: Spacing.space_24,

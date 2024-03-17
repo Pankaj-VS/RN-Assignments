@@ -14,9 +14,9 @@ interface IStyles {
   listenTitle: TextStyle
   timingDetailsContainer: ViewStyle
   details: ViewStyle
-  detailsMainContainer: ViewStyle
+  detailsInnerContainer: ViewStyle
   detailsSubContainer: ViewStyle
-  overThinkerGrey: ImageStyle
+  overThinkerBackgroundImage: ImageStyle
   container: ViewStyle
   imageContainer: ViewStyle
   detailsContainer: ViewStyle
@@ -63,10 +63,9 @@ export const styles = StyleSheet.create<IStyles>({
   },
   listenTitle: {
     color: COLORS.neutral[500],
-    fontFamily: 'Quicksand-bold',
+    fontFamily: Typography.primary.bold,
     fontSize: Spacing.space_12,
     height: Spacing.space_18,
-    letterSpacing: 0.02,
   },
   timingDetailsContainer: {
     flexDirection: 'row',
@@ -76,7 +75,7 @@ export const styles = StyleSheet.create<IStyles>({
     flexDirection: 'row',
     gap: Spacing.space_8,
   },
-  detailsMainContainer: {
+  detailsInnerContainer: {
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -84,7 +83,7 @@ export const styles = StyleSheet.create<IStyles>({
   detailsSubContainer: {
     gap: Spacing.space_4,
   },
-  overThinkerGrey: {
+  overThinkerBackgroundImage: {
     height: Spacing.space_60,
     width: Spacing.space_60,
   },

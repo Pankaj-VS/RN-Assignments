@@ -11,12 +11,11 @@ interface IStyles {
   container: ViewStyle
   details: ViewStyle
   detailsContainer: ViewStyle
-  detailsMainContainer: ViewStyle
   detailsSubContainer: ViewStyle
   imageBackgroundContainer: ViewStyle
   imageContainer: ViewStyle
   listenTitle: TextStyle
-  overThinkerGrey: ImageStyle
+  overThinkerBackgroundImage: ImageStyle
   starIcon: ImageStyle
   timingDetails: TextStyle
   timingDetailsContainer: ViewStyle
@@ -61,10 +60,9 @@ export const styles = StyleSheet.create<IStyles>({
   },
   listenTitle: {
     color: COLORS.neutral[500],
-    fontFamily: 'Quicksand-bold',
+    fontFamily: Typography.primary.bold,
     fontSize: Spacing.space_12,
     height: Spacing.space_18,
-    letterSpacing: 0.02,
   },
   timingDetailsContainer: {
     alignItems: 'center',
@@ -75,13 +73,13 @@ export const styles = StyleSheet.create<IStyles>({
     flexDirection: 'row',
     gap: Spacing.space_8,
   },
-  detailsMainContainer: {
+  detailsSubContainer: {
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
-  detailsSubContainer: {},
-  overThinkerGrey: {
+
+  overThinkerBackgroundImage: {
     height: Spacing.space_52,
     width: Spacing.space_60,
   },

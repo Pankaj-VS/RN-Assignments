@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { ActivityIndicator, Text, View } from 'react-native'
-import WreckerCard from '../wrecker-card/ASWreckerCard'
-
 import { Image } from 'react-native-elements'
+
+import WreckerCard from '../wrecker-card/ASWreckerCard'
+import { nextButtonIcon } from '../../constants/assesment-constants'
 import { getWreckerData } from '../../services/api/get-wrecker-data'
+
 import { styles } from './asTop-wrecker-style'
-const nextButtonIcon = require('../../assets/icons/next.png')
+
 const TopWrecker = () => {
-  const [isLoadingWreckerData, setLoadingWreckerData] = useState(true)
+  const [isLoadingWreckerData, setLoadingWreckerData] = useState<boolean>(true)
   const [wreckerData, setWreckerData] = useState([])
   useEffect(() => {
     getWreckerData(setWreckerData, setLoadingWreckerData)
@@ -24,8 +26,8 @@ const TopWrecker = () => {
           wreckerData.map((data, index) => <WreckerCard key={index} data={data} />)
         )}
       </View>
-      <View style={styles.SubdetailsContainer}>
-        <Text style={styles.SubdetailsText}>View All Wreckers</Text>
+      <View style={styles.SubDetailsContainer}>
+        <Text style={styles.SubDetailsText}>View All Wreckers</Text>
         <Image style={styles.nextButtonIcon} source={nextButtonIcon} />
       </View>
     </View>

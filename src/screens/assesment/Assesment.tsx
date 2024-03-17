@@ -1,13 +1,15 @@
 import React from 'react'
 import { Text, View } from 'react-native'
 import { Image } from 'react-native-elements'
-import LinearGradient from 'react-native-linear-gradient'
-import { palette } from '../../theme/palette'
 
+import LinearGradient from 'react-native-linear-gradient'
+
+import { palette } from '../../theme/palette'
 import TopWrecker from '../../components/top-wreckers/ASTopWrecker'
+import { survivingIcon, thrivingIcon } from '../../constants/assesment-constants'
+
 import { styles } from './assesment-style'
-const surviving = require('../../assets/icons/surviving.png')
-const thriving = require('../../assets/icons/thriving.png')
+
 const Activity = () => {
   const progress: number = 50
   return (
@@ -31,7 +33,7 @@ const Activity = () => {
         <View style={styles.bodyHeader}>
           <View style={styles.bodyHeaderContainer}>
             <View style={styles.iconContainer}>
-              <Image style={styles.icon} source={surviving} />
+              <Image style={styles.icon} source={survivingIcon} />
               <Text style={styles.survivingText}>Surviving</Text>
             </View>
             <View style={styles.scoreContainer}>
@@ -47,7 +49,7 @@ const Activity = () => {
               </View>
             </View>
             <View style={styles.iconContainer}>
-              <Image style={styles.icon} source={thriving} />
+              <Image style={styles.icon} source={thrivingIcon} />
               <Text style={styles.survivingText}>Thriving</Text>
             </View>
           </View>
