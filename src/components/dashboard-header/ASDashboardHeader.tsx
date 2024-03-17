@@ -1,18 +1,16 @@
-
-import { ImageBackground, StatusBar, StyleSheet, Text, View, Image } from 'react-native'
-import { styles } from './header-style'
 import React from 'react'
-import { getTodayDate } from '../../../utils/getTodayDate'
-const headerBackground = require('../../../assets/images/hero.png')
-const calendarImage = require('../../../assets/icons/calendar.png')
-const overthinkerImage = require('../../../assets/icons/overthinkerWhite.png')
+import { Image, ImageBackground, Text, View } from 'react-native'
+import { getTodayDate } from '../../utils/common-utils'
+import { styles } from './asDashboard-header-style'
+const headerBackground = require('../../assets/images/dashboardHeaderBackground.png')
+const calendarImage = require('../../assets/icons/calendar.png')
+const overthinkerImage = require('../../assets/icons/overthinkerWhite.png')
 const Header = () => {
-    let date: string = getTodayDate()
-  let day: number = 1
-  let totaldays: number = 24
+  const date: string = getTodayDate()
+  const day: number = 1
+  const totaldays: number = 24
   return (
-    <View style={styles.container}>
-
+    <View>
       <ImageBackground source={headerBackground}>
         <View style={styles.subcontainer}>
           <View style={styles.dateDetailsContainer}>
@@ -23,7 +21,7 @@ const Header = () => {
             </View>
           </View>
         </View>
-        {/* <View style={styles.overthinkerDetailsContainer}> */}
+
         <View style={styles.overthinkerDetailsSubContainer}>
           <Text style={styles.overThinkeText}>Overthinker</Text>
           <Text style={styles.dayCounterDetails}>
@@ -32,18 +30,12 @@ const Header = () => {
         </View>
 
         <View style={styles.overThinkerImageContainer}>
-
-        <Image style={styles.overThinkerImage} source={overthinkerImage} resizeMode='cover' />
+          <Image style={styles.overThinkerImage} source={overthinkerImage} resizeMode="cover" />
         </View>
-
-
       </ImageBackground>
 
       <View>
-        <View>
-
-        </View>
-
+        <View></View>
       </View>
     </View>
   )
