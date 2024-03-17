@@ -11,6 +11,7 @@ interface IStyles {
   textBody: TextStyle
   creationTime: ViewStyle
 }
+
 export const styles = StyleSheet.create<IStyles>({
   container: {
     borderBottomColor: COLORS.neutral[100],

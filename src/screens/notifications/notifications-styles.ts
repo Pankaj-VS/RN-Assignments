@@ -11,9 +11,9 @@ interface IStyles {
 
 export const styles = StyleSheet.create<IStyles>({
   container: {
+    backgroundColor: COLORS.white,
     flex: Spacing.space_1,
     marginBottom: Spacing.space_88,
-    backgroundColor: COLORS.white,
   },
   subContainer: { flex: Spacing.space_1 },
   listContainer: {

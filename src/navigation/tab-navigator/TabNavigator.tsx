@@ -1,29 +1,31 @@
 import React from 'react'
 import { Image } from 'react-native'
-import { ResizeMode } from '../../constants/common-constants.ts'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'  
+
+import { Activity } from '../../screens/activity/Activity.tsx'
+import Dashboard from '../../screens/dashboard/Dashboard.tsx'
 import { Exercises } from '../../screens/exercises/Exercises.tsx'
 import { Notifications } from '../../screens/notifications/Notifications.tsx'
-
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import Dashboard from '../../screens/dashboard/Dashboard.tsx'
-import Activity from '../../screens/activity/Activity.tsx'
-import Profile from '../../screens/profile/Profile.tsx'
+import { Profile } from '../../screens/profile/Profile.tsx'
 import { COLORS } from '../../theme/colors.ts'
+import { TabNavigatorParams } from '../../types/tabNavigator-types.ts'
 
-import { styles } from './tabNavigator.ts'
+import { ResizeMode } from '../../constants/common-constants.ts'
 
-const Tab = createBottomTabNavigator()
+import { styles } from './tabNavigator-styles.ts'
+
+const Tab = createBottomTabNavigator<TabNavigatorParams>()
 export const TabNavigator = () => {
   return (
     <Tab.Navigator
       screenOptions={{
-        headerShown:false,
+        headerShown: false,
         tabBarStyle: styles.tabBar,
         tabBarShowLabel: false,
         tabBarActiveBackgroundColor: COLORS.primary[100],
       }}>
       <Tab.Screen
-        name="Home"
+        name="Dashboard"
         component={Dashboard}
         options={{
           tabBarIcon: () => (
@@ -37,7 +39,7 @@ export const TabNavigator = () => {
       />
 
       <Tab.Screen
-        name="D-Active"
+        name="Exercises"
         component={Exercises}
         options={{
           tabBarIcon: () => (

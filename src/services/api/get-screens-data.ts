@@ -1,4 +1,4 @@
-export const getNotifcationsExercisesData = async (url: string) => {
+export const getScreensData = async (url: string) => {
   try {
     const res = await fetch(url)
     const data = await res.json()
