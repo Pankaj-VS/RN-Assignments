@@ -6,7 +6,7 @@ import { Notifications } from '../../screens/notifications/Notifications.tsx'
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Dashboard from '../../screens/dashboard/Dashboard.tsx'
-import Activity from '../../screens/activity/Activity.tsx'
+import Activity from '../../screens/assesment/Assesment.tsx'
 import Profile from '../../screens/profile/Profile.tsx'
 import { COLORS } from '../../theme/colors.ts'
 
