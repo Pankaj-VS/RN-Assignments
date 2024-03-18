@@ -9,6 +9,7 @@ import { styles } from './asWrecker-card-style'
 const WreckerCard = (props: IWreckerCardProp) => {
   const { data } = props
   const { title, progress} = data
+  const progressAsNumber: number = parseInt(progress)
   return (
     <View style={styles.cardContainer}>
       <View style={styles.imageContainer}>
@@ -18,7 +19,7 @@ const WreckerCard = (props: IWreckerCardProp) => {
         <View style={styles.detailsSubContainer}>
           <Text style={styles.progressPercentage}>{progress}%</Text>
           <View style={styles.progressBarContainer}>
-            <View style={[styles.progressBar, { width: `${progress}%` }]}></View>
+            <View style={[styles.progressBar, { width: `${progressAsNumber}%` }]}></View>
           </View>
         </View>
         <View>

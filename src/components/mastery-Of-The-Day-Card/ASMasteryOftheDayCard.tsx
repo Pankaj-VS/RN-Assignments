@@ -1,11 +1,12 @@
 import React from 'react'
 import { Image, Text, View } from 'react-native'
 
-import { IChallengeDetailsCardProps, audioIcon, completedIcon, markedFavouriteIcon, notMarkedFavouriteIcon } from '../../constants/dashboard-constants'
+import { IMasteryOftheDayCardProp,audioIcon, completedIcon, markedFavouriteIcon, notMarkedFavouriteIcon, } from '../../constants/dashboard-constants'
 
 import { styles } from './asMastery-of-the-day-card-style'
 
-const ChallengeDetailsCard = ({ masteryCardDetails }: IChallengeDetailsCardProps) => {
+const ChallengeDetailsCard = (props: IMasteryOftheDayCardProp) => {
+  const { masteryCardDetails }=props
   const { image, subheading, heading, timingDetails, iscompleted, isfavourateMarked } =
     masteryCardDetails
 

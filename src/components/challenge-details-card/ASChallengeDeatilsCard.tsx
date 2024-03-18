@@ -11,19 +11,19 @@ import { audioIcon, completedIcon, markedFavouriteIcon, notMarkedFavouriteIcon }
 
 import { styles } from './asChallengeDetailsCard-style'
 
-const ChallengeDetailsCard = ({ ChallengeDetails }: IChallengeDetailsCardProps) => {
+const ChallengeDetailsCard = (props: IChallengeDetailsCardProps) => {
+  const {ChallengeDetails}=props
   const { id, title, isFav, startingTime, endingTime, isCompleted } = ChallengeDetails
 
   return (
     <View style={[styles.container, { backgroundColor: backgroundColorDetails[title] }]}>
-      <View style={styles.imageContainer}>
+      <View style={styles.subContainer}>
         <View style={styles.imageBackgroundContainer}>
-          <Image style={styles.overThinkerBackgroundImage} source={imageDetails[title]} />
-        </View>
+          <Image style={styles.cardImage} source={imageDetails[title]} />       
       </View>
       <View style={styles.detailsContainer}>
-        <View >
-          <View style={styles.detailsSubContainer}>
+        <View style={styles.detailsSubContainer}>
+          <View style={styles.detailsInnerContainer}>
             <View style={styles.details}>
               <Text style={styles.listenTitle}>Challenge {id}</Text>
               {isCompleted === 'true' ? (
@@ -51,6 +51,7 @@ const ChallengeDetailsCard = ({ ChallengeDetails }: IChallengeDetailsCardProps) 
             <Image style={styles.audioIcon} source={audioIcon} />
           </View>
         </View>
+      </View>
       </View>
     </View>
   )

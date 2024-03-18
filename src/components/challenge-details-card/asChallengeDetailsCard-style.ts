@@ -7,16 +7,17 @@ import { Typography } from '../../theme/typography'
 interface IStyles {
   audioIcon: ImageStyle
   audioIconBackground: ViewStyle
+  cardImage: ImageStyle
   completedIcon: ImageStyle
   container: ViewStyle
   details: ViewStyle
   detailsContainer: ViewStyle
-  detailsSubContainer: ViewStyle
+  detailsInnerContainer: ViewStyle
+  detailsSubContainer:ViewStyle
   imageBackgroundContainer: ViewStyle
-  imageContainer: ViewStyle
   listenTitle: TextStyle
-  overThinkerBackgroundImage: ImageStyle
   starIcon: ImageStyle
+  subContainer:ViewStyle
   timingDetails: TextStyle
   timingDetailsContainer: ViewStyle
   titleText: TextStyle
@@ -43,6 +44,7 @@ export const styles = StyleSheet.create<IStyles>({
   timingDetails: {
     fontFamily: Typography.primary.medium,
     fontSize: Spacing.space_12,
+    lineHeight:18
   },
   titleText: {
     color: COLORS.neutral[700],
@@ -73,34 +75,38 @@ export const styles = StyleSheet.create<IStyles>({
     flexDirection: 'row',
     gap: Spacing.space_8,
   },
-  detailsSubContainer: {
-    alignItems: 'center',
+  detailsInnerContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    
   },
-
-  overThinkerBackgroundImage: {
-    height: Spacing.space_52,
-    width: Spacing.space_60,
+  cardImage: {
+    height: Spacing.space_50,
+    width:Spacing.space_56,
+    resizeMode:"cover"
+  },
+  subContainer:{
+    flex:1,
+    flexDirection: 'row',
+    gap: Spacing.space_12,
   },
   container: {
     borderRadius: Spacing.space_16,
     flexDirection: 'row',
     gap: Spacing.space_16,
-    paddingHorizontal: Spacing.space_20,
-  },
-  imageContainer: {
-    marginVertical: Spacing.space_28,
+    paddingHorizontal: Spacing.space_16,
+    paddingVertical:Spacing.space_16,
   },
   detailsContainer: {
     flex: Spacing.space_1,
     gap: Spacing.space_4,
-    marginVertical: Spacing.space_24,
+  },
+  detailsSubContainer:{
+    gap:4
   },
   imageBackgroundContainer: {
-    borderRadius: Spacing.space_10,
-    paddingBottom: Spacing.space_10,
-    paddingHorizontal: Spacing.space_6,
-    paddingTop: Spacing.space_10,
+    marginBottom: Spacing.space_12,
+    paddingHorizontal: Spacing.space_10,
+    paddingVertical: Spacing.space_15,
   },
 })
