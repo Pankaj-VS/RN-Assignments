@@ -40,6 +40,9 @@ export const palette = {
     '600': '#4E5E6C',
     '700': '#292F36',
   },
+  aqua:{
+    '100': '#D0F7F1',
+  },
   genoa: '#178A53',
   punch: '#D72B2B',
   white: '#FFFFFF',
@@ -47,6 +50,7 @@ export const palette = {
   black: '#000000',
   exerciseCardButtonGradient: ['#FFFFFF00', '#FFFFFFCC'],
   exerciseCardTitleGradient: ['#FFFFFF8F', '#FFFFFF1E', '#FFFFFF00'],
+
   audioButtonShadow: '#4B4B4B',
   ProgressBarGradient:['#20ACA4', '#73EEE9', '#E84C8D', '#FC9DB8', '#FCCF79', '#FFB800'],
 }
