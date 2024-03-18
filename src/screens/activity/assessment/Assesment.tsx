@@ -4,32 +4,16 @@ import { Image } from 'react-native-elements'
 
 import LinearGradient from 'react-native-linear-gradient'
 
-import { palette } from '../../theme/palette'
-import TopWrecker from '../../components/top-wreckers/ASTopWrecker'
-import { survivingIcon, thrivingIcon } from '../../constants/assesment-constants'
+import { palette } from '../../../theme/palette.ts'
+import TopWrecker from '../../../components/top-wreckers/ASTopWrecker.tsx'
+import { survivingIcon, thrivingIcon } from '../../../constants/assesment-constants.ts'
 
-import {styles}  from './assesment-style.ts';
+import { styles } from './assesment-style.ts'
 
-
-const Assesment = () => {
+export const Assesment = () => {
   const progress: number = 50
   return (
     <>
-      <View>
-        <View style={styles.header}>
-          <Text style={styles.headerText}>Your Activity</Text>
-        </View>
-      </View>
-      <View style={styles.headerTabs}>
-        <View style={styles.subHeaderTabs}>
-          <View style={[styles.tabs, styles.progressTab]}>
-            <Text style={styles.progressTabText}>Progress</Text>
-          </View>
-          <View style={[styles.tabs, styles.assesmentTab]}>
-            <Text style={styles.assesmentTabText}>Assesment</Text>
-          </View>
-        </View>
-      </View>
       <View style={styles.body}>
         <View style={styles.bodyHeader}>
           <View style={styles.bodyHeaderContainer}>
@@ -65,5 +49,3 @@ const Assesment = () => {
     </>
   )
 }
-
-export default Assesment

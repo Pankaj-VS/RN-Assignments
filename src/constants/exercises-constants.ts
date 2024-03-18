@@ -4,6 +4,7 @@ interface IExerciseCardInfoType {
   imageSource: number
   textColor: string
 }
+
 export const ExerciseCardInfo: { [key: string]: IExerciseCardInfoType } = {
   'Outer Ring': {
     imageSource: require('../assets/images/outerRing.png'),

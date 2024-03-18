@@ -17,6 +17,7 @@ interface IASExerciseCardProps {
 export const ASExerciseCard = ({ name }: IASExerciseCardProps) => {
   const txtColor: string = ExerciseCardInfo[name].textColor
   const imgSource: number = ExerciseCardInfo[name].imageSource
+
   return (
     <View style={styles.container}>
       <ImageBackground

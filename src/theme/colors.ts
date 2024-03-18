@@ -10,8 +10,9 @@ const Colors = {
   white: palette.white,
   tundora: palette.tundora,
   dark: palette.black,
-  exerciseCardButtonContainerGradient : palette.exerciseCardButtonGradient,
-  exerciseCardTitleContainerGradient : palette.exerciseCardTitleGradient
+  exerciseCardButtonContainerGradient: palette.exerciseCardButtonGradient,
+  exerciseCardTitleContainerGradient: palette.exerciseCardTitleGradient,
+  charcoal: palette.charcoal,
 }
 
 export const COLORS = Colors
