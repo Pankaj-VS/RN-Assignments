@@ -1,15 +1,15 @@
-import { SafeAreaView } from 'react-native'
+import { SafeAreaView, StatusBar } from 'react-native'
+import { NavigationContainer } from '@react-navigation/native'
 
-import { showNotificationPage } from './src/constants/common-constants.ts'
-import { Exercises } from './src/screens/exercises/Exercises.tsx'
-import { Notifications } from './src/screens/notifications/Notifications.tsx'
-
-import { styles } from './app-styles.ts'
+import StackNavigator from './src/navigation/stack-navigator/StackNavigator.tsx'
 
 const App = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      {showNotificationPage ? <Notifications /> : <Exercises />}
+    <SafeAreaView style={{ flex: 1 }}>
+      <NavigationContainer>
+        <StatusBar backgroundColor="transparent" translucent />
+        <StackNavigator />
+      </NavigationContainer>
     </SafeAreaView>
   )
 }

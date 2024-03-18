@@ -1,16 +1,16 @@
 import { Image, Text, View } from 'react-native'
 
-import { ResizeMode } from '../../constants/common-constants'
 import { COLORS } from '../../theme/colors'
 import { INotificationData } from '../../types/notification-types'
 import { calculateNotificationTime } from '../../utils/common-utils'
 
+import { ResizeMode } from '../../constants/common-constants'
 import { imagePaths } from '../../constants/notification-constants'
 
 import { styles } from './asNotificationCard-styles'
 
-export const ASNotificationCard = ( props : INotificationData ) => {
-  const {isStatusComplete, imageName, notification, timeOfCreation} = props
+export const ASNotificationCard = (props: INotificationData) => {
+  const { isStatusComplete, imageName, notification, timeOfCreation } = props
   const backgroundColor: string = isStatusComplete ? COLORS.primary[50] : COLORS.white
 
   return (

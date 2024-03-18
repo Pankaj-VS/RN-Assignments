@@ -1,3 +1,5 @@
+import { ProgressBarAndroidBase } from 'react-native'
+
 export const palette = {
   green: {
     '50': '#F1FCFA',
@@ -17,6 +19,7 @@ export const palette = {
     '400': '#F175AC',
     '500': '#E84C8D',
     '600': '#D72B6A',
+    '700': '#F275AD',
   },
   yellow: {
     '50': '#FFFEEA',
@@ -26,7 +29,7 @@ export const palette = {
     '400': '#FFD61E',
     '500': '#FFB800',
     '600': '#E28D00',
-    '700' : '#B96204'
+    '700': '#B96204',
   },
   shark: {
     '50': '#F4F6F7',
@@ -45,4 +48,7 @@ export const palette = {
   black: '#000000',
   exerciseCardButtonGradient: ['#FFFFFF00', '#FFFFFFCC'],
   exerciseCardTitleGradient: ['#FFFFFF8F', '#FFFFFF1E', '#FFFFFF00'],
+  charcoal: '#2B3F57',
+  audioButtonShadow: '#4B4B4B',
+  ProgressBarGradient: ['#20ACA4', '#73EEE9', '#E84C8D', '#FC9DB8', '#FCCF79', '#FFB800'],
 }

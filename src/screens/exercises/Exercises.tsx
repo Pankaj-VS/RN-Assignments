@@ -3,10 +3,12 @@ import { FlatList, View } from 'react-native'
 
 import { ASExerciseCard } from '../../components/exercise-card/ASExerciseCard'
 import { ASHeader } from '../../components/header/ASHeader'
-import { getNotifcationsExercisesData } from '../../services/api/get-notifcations-exercises-data'
+import { getScreensData } from '../../services/api/get-screens-data'
 import { IExerciseData } from '../../types/exercise-types'
+import ASLoader from '../../components/loader/ASLoader'
 
 import { API } from '../../constants/api-constants'
+import { backGreen } from '../../constants/common-constants'
 
 import { styles } from './exercises-styles'
 
@@ -14,7 +16,7 @@ export const Exercises = () => {
   const [exerciseData, setExerciseData] = useState<IExerciseData[]>([])
 
   const fetchExerciseData = async () => {
-    const response = await getNotifcationsExercisesData(API.EXERCISES_API)
+    const response = await getScreensData(API.EXERCISES_API)
     if (response.success) {
       setExerciseData(response.data)
     } else {
@@ -28,7 +30,7 @@ export const Exercises = () => {
 
   return (
     <View style={styles.container}>
-      <ASHeader title="D-active" />
+      <ASHeader image1={backGreen} title="D-active" />
       <FlatList
         data={exerciseData}
         renderItem={({ item }) => (
@@ -37,7 +39,9 @@ export const Exercises = () => {
           </View>
         )}
         showsVerticalScrollIndicator={false}
+        ListEmptyComponent={()=><ASLoader/>}
       />
     </View>
   )
 }
+

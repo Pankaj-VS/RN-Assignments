@@ -5,13 +5,14 @@ const Colors = {
   secondary: palette.pink,
   accent: palette.yellow,
   neutral: palette.shark,
-  failure: palette.punch,
+  punch: palette.punch,
   success: palette.genoa,
   white: palette.white,
   tundora: palette.tundora,
   dark: palette.black,
-  exerciseCardButtonContainerGradient : palette.exerciseCardButtonGradient,
-  exerciseCardTitleContainerGradient : palette.exerciseCardTitleGradient
+  exerciseCardButtonContainerGradient: palette.exerciseCardButtonGradient,
+  exerciseCardTitleContainerGradient: palette.exerciseCardTitleGradient,
+  charcoal: palette.charcoal,
 }
 
 export const COLORS = Colors
