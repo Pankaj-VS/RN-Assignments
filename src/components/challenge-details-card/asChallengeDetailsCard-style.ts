@@ -1,4 +1,5 @@
 import { ImageStyle, StyleSheet, TextStyle, ViewStyle } from 'react-native'
+
 import { COLORS } from '../../theme/colors'
 import { palette } from '../../theme/palette'
 import { Spacing } from '../../theme/spacing'
@@ -47,7 +48,7 @@ export const styles = StyleSheet.create<IStyles>({
   timingDetails: {
     fontFamily: Typography.primary.medium,
     fontSize: Spacing.space_12,
-    lineHeight:18
+    lineHeight:Spacing.space_18
   },
   titleText: {
     color: COLORS.neutral[700],

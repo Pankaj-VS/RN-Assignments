@@ -28,7 +28,7 @@ export const masteryCardDetails: IMasteryCardDetails = {
 }
 
 export interface IMasteryOftheDayCardProp {
-    masteryCardDetails:IMasteryCardDetails
+  masteryCardDetails: IMasteryCardDetails
 }
 export interface IChallengeDetail {
   id: number
@@ -39,20 +39,18 @@ export interface IChallengeDetail {
   isCompleted: string
 }
 
-
 export interface IChallengeDetailsCardProps {
-  ChallengeDetails:IChallengeDetail
+  ChallengeDetails: IChallengeDetail
 }
 
-interface IImageDetails{
+interface IImageDetails {
   [key: string]: ImageSourcePropType
 }
-export const imageDetails:IImageDetails= {
-  ['D-active'] : require('../assets/images/dActive.png'),
-  ['Reminder of the day'] : require('../assets/images/reminder.png'),
-  ['Reflection of the day'] : require('../assets/images/reflection.png'),
+export const imageDetails: IImageDetails = {
+  ['D-active']: require('../assets/images/dActive.png'),
+  ['Reminder of the day']: require('../assets/images/reminder.png'),
+  ['Reflection of the day']: require('../assets/images/reflection.png'),
 }
-
 
 interface BackgroundColorDetails {
   [key: string]: string
@@ -62,7 +60,6 @@ export const backgroundColorDetails: BackgroundColorDetails = {
   'Reminder of the day': COLORS.accent[100],
   'Reflection of the day': COLORS.primary[100],
 }
-
 
 export const headerBackground = require('../assets/images/dashboardHeaderBackground.png')
 export const calendarImage = require('../assets/icons/calendar.png')

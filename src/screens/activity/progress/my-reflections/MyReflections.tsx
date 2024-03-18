@@ -5,6 +5,7 @@ import { ASHeader } from '../../../../components/header/ASHeader'
 import { ASMyReflectionsCard } from '../../../../components/my-reflections-card/ASMyReflectionsCard'
 import { IMyReflectionsData } from '../../../../types/activity-types'
 import { getScreensData } from '../../../../services/api/get-screens-data'
+import ASLoader from '../../../../components/loader/ASLoader'
 
 import { myReflectionsBackground } from '../../../../constants/activity-constants'
 import { backGreen } from '../../../../constants/common-constants'
@@ -31,7 +32,7 @@ export const MyReflections = () => {
       <ASHeader image1={backGreen} title={'My Reflections'} canGoToPrevoiusScreen={true} />
       <FlatList
         showsVerticalScrollIndicator={false}
-        ListEmptyComponent={() => <Text>Loading Data...</Text>}
+        ListEmptyComponent={() => <ASLoader/>}
         data={myReflections}
         renderItem={({ item }) => <ASMyReflectionsCard date={item.date} title={item.title} />}
       />

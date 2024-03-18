@@ -7,15 +7,15 @@ import { Typography } from '../../theme/typography'
 import { ResizeMode } from '../../constants/common-constants'
 
 interface IStyles {
-  centeredView:ViewStyle
-  modalView:ViewStyle
-  modalImage:ImageStyle
-  chart : ViewStyle
-  textContainer:ViewStyle
-  modalTitle:TextStyle
-  progressContainer:ViewStyle
-  modalDescriptionText:TextStyle
-  modalProgressText:TextStyle
+  centeredView: ViewStyle
+  modalView: ViewStyle
+  modalImage: ImageStyle
+  chart: ViewStyle
+  textContainer: ViewStyle
+  modalTitle: TextStyle
+  progressContainer: ViewStyle
+  modalDescriptionText: TextStyle
+  modalProgressText: TextStyle
 }
 
 export const styles = StyleSheet.create<IStyles>({

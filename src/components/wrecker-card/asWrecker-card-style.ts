@@ -1,4 +1,5 @@
 import { ImageStyle, StyleSheet, TextStyle, ViewStyle } from 'react-native'
+
 import { COLORS } from '../../theme/colors'
 import { Spacing } from '../../theme/spacing'
 import { Typography } from '../../theme/typography'
@@ -9,10 +10,9 @@ interface IStyles {
   detailsSubContainer: ViewStyle
   wreckerImage: ImageStyle
   imageContainer: ViewStyle
-
   progressPercentage: TextStyle
   title: TextStyle
-  chart:ViewStyle
+  chart: ViewStyle
 }
 
 export const styles = StyleSheet.create<IStyles>({
@@ -61,6 +61,6 @@ export const styles = StyleSheet.create<IStyles>({
   chart: {
     backgroundColor: COLORS.secondary[200],
     borderRadius: Spacing.space_2,
-    borderWidth:Spacing.space_0
-  }
+    borderWidth: Spacing.space_0,
+  },
 })

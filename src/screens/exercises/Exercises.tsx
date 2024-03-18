@@ -5,6 +5,7 @@ import { ASExerciseCard } from '../../components/exercise-card/ASExerciseCard'
 import { ASHeader } from '../../components/header/ASHeader'
 import { getScreensData } from '../../services/api/get-screens-data'
 import { IExerciseData } from '../../types/exercise-types'
+import ASLoader from '../../components/loader/ASLoader'
 
 import { API } from '../../constants/api-constants'
 import { backGreen } from '../../constants/common-constants'
@@ -29,7 +30,7 @@ export const Exercises = () => {
 
   return (
     <View style={styles.container}>
-      <ASHeader image1 = {backGreen} title="D-active" />
+      <ASHeader image1={backGreen} title="D-active" />
       <FlatList
         data={exerciseData}
         renderItem={({ item }) => (
@@ -38,7 +39,9 @@ export const Exercises = () => {
           </View>
         )}
         showsVerticalScrollIndicator={false}
+        ListEmptyComponent={()=><ASLoader/>}
       />
     </View>
   )
 }
+

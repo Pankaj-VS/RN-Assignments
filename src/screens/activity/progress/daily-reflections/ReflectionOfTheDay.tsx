@@ -1,14 +1,16 @@
 import React, { useState } from 'react'
-import { Alert, Pressable, StatusBar, Text, TextInput, View } from 'react-native'
+import { Alert, Pressable, Text, TextInput, View } from 'react-native'
+import * as Progress from 'react-native-progress'
+
+import { ASHeader } from '../../../../components/header/ASHeader'
+import { COLORS } from '../../../../theme/colors'
+import { Spacing } from '../../../../theme/spacing'
+import { QuestionAnswer } from '../../../../types/activity-types'
+
+import { backWhite } from '../../../../constants/common-constants'
+import { data } from '../../../../constants/profile-constants'
 
 import { styles } from './reflectionOfTheDay-styles'
-import { QuestionAnswer } from '../../../../types/activity-types'
-import { data } from '../../../../constants/profile-constants'
-import { COLORS } from '../../../../theme/colors'
-import { ASHeader } from '../../../../components/header/ASHeader'
-import { backWhite } from '../../../../constants/common-constants'
-import * as Progress from 'react-native-progress'
-import { Spacing } from '../../../../theme/spacing'
 
 export const ReflectionOfTheDay = () => {
   const [idx, setIdx] = useState<number>(0)
@@ -35,7 +37,7 @@ export const ReflectionOfTheDay = () => {
   }
 
   const handleSubmit = () => {
-    Alert.alert('Submitted Answer')
+    Alert.alert('Answers Submitted')
     console.log('--- Submitted Answers ---')
     for (const item of questionsAndAnswers) {
       console.log(`Question: ${item.question}`)
@@ -48,17 +50,17 @@ export const ReflectionOfTheDay = () => {
       <ASHeader
         title="Day 1"
         image1={backWhite}
-        backgroundColor={COLORS.primary[600]}
+        backgroundColor={COLORS.primary[700]}
         canGoToPrevoiusScreen={true}
         headerTextColor={COLORS.white}
       />
       <View>
-        <View style={styles.subContainer1}>
+        <View style={styles.centerAlign}>
           <Text style={styles.progressText}>
             {idx + 1}/{data.length}
           </Text>
         </View>
-        <View style={styles.subContainer1}>
+        <View style={styles.centerAlign}>
           <Progress.Bar
             style={styles.progressBar}
             progress={(idx + 1) / data.length}
@@ -68,21 +70,19 @@ export const ReflectionOfTheDay = () => {
           />
         </View>
       </View>
-      <View style={styles.subContainer1}>
-        <View style={styles.subContainer2}>
-          <View style={styles.subContainer3}>
-            <Text style={styles.txt}>{questionsAndAnswers[idx].question}</Text>
-
+      <View style={styles.centerAlign}>
+        <View style={styles.whiteContainer}>
+          <View style={styles.queAnsContainer}>
+            <Text style={styles.text}>{questionsAndAnswers[idx].question}</Text>
             <TextInput
-              style={styles.txt}
+              style={styles.text}
               placeholder="Type your answer here..."
               multiline={true}
               onChangeText={handleChangeText}
               value={questionsAndAnswers[idx].answer}
             />
           </View>
-
-          <View style={styles.subContainer4}>
+          <View style={styles.buttonsContainer}>
             {idx > 0 ? (
               <Pressable onPress={handlePrevious}>
                 <Text style={styles.button}>Previous</Text>
@@ -105,10 +105,10 @@ export const ReflectionOfTheDay = () => {
           </View>
         </View>
       </View>
-      <View style={styles.subContainer1}>
+      <View style={styles.centerAlign}>
         <View style={styles.effect1}></View>
       </View>
-      <View style={styles.subContainer1}>
+      <View style={styles.centerAlign}>
         <View style={styles.effect2}></View>
       </View>
     </View>

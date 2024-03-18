@@ -9,8 +9,8 @@ import { imagePaths } from '../../constants/notification-constants'
 
 import { styles } from './asNotificationCard-styles'
 
-export const ASNotificationCard = ( props : INotificationData ) => {
-  const {isStatusComplete, imageName, notification, timeOfCreation} = props
+export const ASNotificationCard = (props: INotificationData) => {
+  const { isStatusComplete, imageName, notification, timeOfCreation } = props
   const backgroundColor: string = isStatusComplete ? COLORS.primary[50] : COLORS.white
 
   return (

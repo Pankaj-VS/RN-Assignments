@@ -1,11 +1,13 @@
-import React, { useEffect, useState ,} from 'react'
-import { ActivityIndicator, View ,FlatList, Text} from 'react-native'
+import React, { useEffect, useState } from 'react'
+import { View, FlatList } from 'react-native'
 
 import ChallengeDetailsCard from '../../components/challenge-details-card/ASChallengeDeatilsCard'
 import Header from '../../components/dashboard-header/ASDashboardHeader'
 import MasteryOftheDayCard from '../../components/mastery-Of-The-Day-Card/ASMasteryOftheDayCard'
-import { masteryCardDetails } from '../../constants/dashboard-constants'
 import { getChallengesData } from '../../services/api/get-challenges-data'
+import ASLoader from '../../components/loader/ASLoader'
+
+import { masteryCardDetails } from '../../constants/dashboard-constants'
 
 import { styles } from './dashboard-styles'
 
@@ -14,9 +16,7 @@ const Dashboard = () => {
   const [ChallengesData, setChallengesData] = useState([])
 
   useEffect(() => {
-   
-       getChallengesData(setLoading, setChallengesData)
-  
+    getChallengesData(setLoading, setChallengesData)
   }, [])
   return (
     <>
@@ -27,7 +27,7 @@ const Dashboard = () => {
       <View style={styles.flatListContainer}>
         <View style={styles.FlatList}>
           {isLoading ? (
-            <ActivityIndicator />
+            <ASLoader />
           ) : (
             <FlatList
               data={ChallengesData}
@@ -37,10 +37,8 @@ const Dashboard = () => {
                 </View>
               )}
               showsVerticalScrollIndicator={false}
-              ListEmptyComponent={() => <Text>Loading Data...</Text>}
             />
           )}
-          
         </View>
       </View>
     </>
@@ -48,5 +46,3 @@ const Dashboard = () => {
 }
 
 export default Dashboard
-
-

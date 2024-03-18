@@ -1,4 +1,4 @@
-import { ProgressBarAndroidBase } from "react-native";
+import { ProgressBarAndroidBase } from 'react-native'
 
 export const palette = {
   green: {
@@ -50,5 +50,5 @@ export const palette = {
   exerciseCardTitleGradient: ['#FFFFFF8F', '#FFFFFF1E', '#FFFFFF00'],
   charcoal: '#2B3F57',
   audioButtonShadow: '#4B4B4B',
-  ProgressBarGradient:['#20ACA4', '#73EEE9', '#E84C8D', '#FC9DB8', '#FCCF79', '#FFB800'],
+  ProgressBarGradient: ['#20ACA4', '#73EEE9', '#E84C8D', '#FC9DB8', '#FCCF79', '#FFB800'],
 }

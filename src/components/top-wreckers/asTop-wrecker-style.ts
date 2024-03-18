@@ -1,4 +1,5 @@
 import { ImageStyle, StyleSheet, TextStyle, ViewStyle } from 'react-native'
+
 import { COLORS } from '../../theme/colors'
 import { Spacing } from '../../theme/spacing'
 import { Typography } from '../../theme/typography'
@@ -12,6 +13,7 @@ interface IStyles {
   SubDetailsText: TextStyle
   SubDetailsContainer: ViewStyle
 }
+
 export const styles = StyleSheet.create<IStyles>({
   SubDetailsText: {
     color: COLORS.white,

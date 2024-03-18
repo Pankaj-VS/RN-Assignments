@@ -5,7 +5,6 @@ export interface IActivityData {
   description: string
 }
 
-
 export interface IMyReflectionsData {
   id: string
   date: string
@@ -13,6 +12,6 @@ export interface IMyReflectionsData {
 }
 
 export interface QuestionAnswer {
-  question: string;
-  answer: string;
+  question: string
+  answer: string
 }

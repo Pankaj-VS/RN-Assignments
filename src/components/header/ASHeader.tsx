@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, Text, TouchableOpacity, View } from 'react-native'
+import { Image, ImageSourcePropType, Text, TouchableOpacity, View } from 'react-native'
 import { useNavigation } from '@react-navigation/core'
 
 import { COLORS } from '../../theme/colors'
@@ -11,9 +11,9 @@ import { ResizeMode } from '../../constants/common-constants'
 import { styles } from './asHeader-styles'
 
 interface IASHeaderProps {
-  image1?: number
+  image1?: ImageSourcePropType
   title: string
-  image2?: number
+  image2?: ImageSourcePropType
   headerTextColor?: string
   backgroundColor?: string
   canGoToPrevoiusScreen?: boolean
