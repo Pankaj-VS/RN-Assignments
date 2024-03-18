@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
-import { Text, View, TouchableOpacity, Image } from 'react-native'
-import * as Progress from 'react-native-progress'
+import React,{useState} from 'react'
+import { Text, View, TouchableOpacity,Image } from 'react-native';
+import * as Progress  from 'react-native-progress'
 
-import { ASPopUp } from '../pop-up/ASPopUp'
+import { Spacing } from '../../theme/spacing'
 import { COLORS } from '../../theme/colors'
+import { ASPopUp } from '../pop-up/ASPopUp'; 
 
 import { IWreckerCardProp, imageDetails } from '../../constants/assesment-constants'
 
@@ -27,12 +28,15 @@ const WreckerCard = (props: IWreckerCardProp) => {
         <View style={styles.detailsSubContainer}>
           <Text style={styles.progressPercentage}>{progress}%</Text>
           <Progress.Bar
-            progress={progressAsNumber / 100}
-            height={12}
-            width={51}
-            style={styles.chart}
-            color={COLORS.secondary[500]}
-          />
+        progress={progressAsNumber / 100}
+        width={Spacing.space_50}
+        height={Spacing.space_12}
+        color={COLORS.secondary[500]}
+        unfilledColor={COLORS.secondary[300]}
+        borderWidth={0}
+        borderRadius={2}
+        
+      />
         </View>
         <View>
           <Text style={styles.title}>{title}</Text>

@@ -1,4 +1,5 @@
 import moment from 'moment'
+import { Progress } from '../screens/activity/progress/Progress'
 
 export const calculateNotificationTime = (timeOfCreation: string): string => {
   const creationTime = moment(timeOfCreation)
@@ -56,4 +57,17 @@ export const getCurrentDayDate = (): string => {
   }
 
   return todayDate
+}
+
+export const getGradientColorPostionData = (Progress: number) => {
+  const colorPosition = [0, 0, 0, 0, 0, 0]
+  const lengthOfColorPositon = colorPosition.length
+  const noOfColorNeeded = Math.floor(Progress / 16)
+  const fractionOfSizeOfColor: number = Number((100 / noOfColorNeeded).toFixed(2))
+  let counter = 1
+  for (let i = lengthOfColorPositon - noOfColorNeeded; i < lengthOfColorPositon; i++) {
+    colorPosition[i] = Number(((counter * fractionOfSizeOfColor) / 100).toFixed(2))
+    counter++
+  }
+  return colorPosition
 }

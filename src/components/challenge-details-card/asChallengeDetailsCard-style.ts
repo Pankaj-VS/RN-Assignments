@@ -3,6 +3,7 @@ import { COLORS } from '../../theme/colors'
 import { palette } from '../../theme/palette'
 import { Spacing } from '../../theme/spacing'
 import { Typography } from '../../theme/typography'
+import { backGreen } from '../../constants/common-constants'
 
 interface IStyles {
   audioIcon: ImageStyle
@@ -21,6 +22,8 @@ interface IStyles {
   timingDetails: TextStyle
   timingDetailsContainer: ViewStyle
   titleText: TextStyle
+  webViewCloseButton:ViewStyle
+  webViewCloseButtonText:TextStyle
 }
 
 export const styles = StyleSheet.create<IStyles>({
@@ -108,5 +111,15 @@ export const styles = StyleSheet.create<IStyles>({
     marginBottom: Spacing.space_12,
     paddingHorizontal: Spacing.space_10,
     paddingVertical: Spacing.space_15,
+  },
+  webViewCloseButton:{
+    height:Spacing.space_40,
+    backgroundColor: COLORS.neutral[300],
+    justifyContent:'center',
+    alignItems:'center'
+  },
+  webViewCloseButtonText:{
+    fontFamily:Typography.primary.bold,
+    fontSize:Spacing.space_14,
   },
 })
