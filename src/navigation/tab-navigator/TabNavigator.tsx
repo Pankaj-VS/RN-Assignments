@@ -11,8 +11,6 @@ import Profile from '../../screens/profile/Profile.tsx'
 import { COLORS } from '../../theme/colors.ts'
 
 import { styles } from './tabNavigator.ts'
-import MyReflection from '../../screens/activity/my-reflection/MyReflection.tsx'
-import ReflectionOfTheDay from '../../screens/activity/reflection-of-the-day/ReflectionOfTheDay.tsx'
 
 const Tab = createBottomTabNavigator()
 export const TabNavigator = () => {
@@ -53,7 +51,7 @@ export const TabNavigator = () => {
       />
       <Tab.Screen
         name="Activity"
-        component={ReflectionOfTheDay}
+        component={Activity}
         options={{
           tabBarIcon: () => (
             <Image
