@@ -1,13 +1,16 @@
 import { ImageStyle, StyleSheet, ViewStyle } from 'react-native'
 
 import { Spacing } from '../../theme/spacing'
+import { COLORS } from '../../theme/colors'
 
-interface IStyles {
+interface Styles {
+  icon: ImageStyle
   tabBar: ViewStyle
-  navIcon: ImageStyle
+  iconContainer: ViewStyle
+  activeIcon: ImageStyle
 }
 
-export const styles = StyleSheet.create<IStyles>({
+export const styles = StyleSheet.create<Styles>({
   tabBar: {
     borderTopLeftRadius: Spacing.space_16,
     borderTopRightRadius: Spacing.space_16,
@@ -15,9 +18,22 @@ export const styles = StyleSheet.create<IStyles>({
     paddingHorizontal: Spacing.space_24,
     paddingVertical: Spacing.space_20,
     position: 'absolute',
+    borderTopWidth: Spacing.space_0,
   },
-  navIcon: {
+  icon: {
     height: Spacing.space_24,
     width: Spacing.space_24,
+  },
+  iconContainer: {
+    flex: Spacing.space_1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: Spacing.space_100,
+    marginBottom: Spacing.space_20,
+  },
+  activeIcon: {
+    backgroundColor: COLORS.primary[100],
+    borderRadius: Spacing.space_100,
+    width: Spacing.space_50,
   },
 })

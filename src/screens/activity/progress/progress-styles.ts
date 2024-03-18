@@ -19,6 +19,7 @@ export const styles = StyleSheet.create<IStyles>({
     flex: Spacing.space_1,
     marginTop: Spacing.space_32,
     gap: Spacing.space_32,
+    paddingHorizontal: Spacing.space_20,
     marginBottom: Spacing.space_162,
   },
   subContainer: {

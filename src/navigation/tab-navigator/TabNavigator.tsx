@@ -1,53 +1,52 @@
 import React from 'react'
-import { Image } from 'react-native'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'  
+import { Image, View } from 'react-native'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
-import { Activity } from '../../screens/activity/Activity.tsx'
-import Dashboard from '../../screens/dashboard/Dashboard.tsx'
-import { Exercises } from '../../screens/exercises/Exercises.tsx'
-import { Notifications } from '../../screens/notifications/Notifications.tsx'
-import { Profile } from '../../screens/profile/Profile.tsx'
-import { COLORS } from '../../theme/colors.ts'
-import { TabNavigatorParams } from '../../types/tabNavigator-types.ts'
+import Dashboard from '../../screens/dashboard/Dashboard'
+import { Exercises } from '../../screens/exercises/Exercises'
+import {Activity} from '../../screens/activity/Activity'
+import {Notifications} from '../../screens/notifications/Notifications'
+import {Profile} from '../../screens/profile/Profile'
+import { TabNavigatorParams } from '../../types/tabNavigator-types'
 
-import { ResizeMode } from '../../constants/common-constants.ts'
+import { ResizeMode } from '../../constants/common-constants'
 
-import { styles } from './tabNavigator-styles.ts'
+import { styles } from './tabNavigator-styles'
 
 const Tab = createBottomTabNavigator<TabNavigatorParams>()
-export const TabNavigator = () => {
+
+const TabNavigator = () => {
   return (
     <Tab.Navigator
       screenOptions={{
-        headerShown: false,
         tabBarStyle: styles.tabBar,
         tabBarShowLabel: false,
-        tabBarActiveBackgroundColor: COLORS.primary[100],
-      }}>
+        headerShown: false,
+      }}
+      initialRouteName="Dashboard">
       <Tab.Screen
         name="Dashboard"
         component={Dashboard}
         options={{
-          tabBarIcon: () => (
-            <Image
-              source={require('../../assets/icons/home.png')}
-              style={styles.navIcon}
-              resizeMode={ResizeMode.contain}
-            />
+          tabBarIcon: ({ focused }) => (
+            <View style={[styles.iconContainer, focused && styles.activeIcon]}>
+              <Image
+                source={require('../../assets/icons/home.png')}
+                style={styles.icon}
+                resizeMode={ResizeMode.contain}
+              />
+            </View>
           ),
         }}
       />
-
       <Tab.Screen
         name="Exercises"
         component={Exercises}
         options={{
-          tabBarIcon: () => (
-            <Image
-              source={require('../../assets/icons/exercise.png')}
-              style={styles.navIcon}
-              resizeMode={ResizeMode.contain}
-            />
+          tabBarIcon: ({ focused }) => (
+            <View style={[styles.iconContainer, focused && styles.activeIcon]}>
+              <Image source={require('../../assets/icons/exercise.png')} style={styles.icon} />
+            </View>
           ),
         }}
       />
@@ -55,12 +54,10 @@ export const TabNavigator = () => {
         name="Activity"
         component={Activity}
         options={{
-          tabBarIcon: () => (
-            <Image
-              source={require('../../assets/icons/activity.png')}
-              style={styles.navIcon}
-              resizeMode={ResizeMode.contain}
-            />
+          tabBarIcon: ({ focused }) => (
+            <View style={[styles.iconContainer, focused && styles.activeIcon]}>
+              <Image source={require('../../assets/icons/activity.png')} style={styles.icon} />
+            </View>
           ),
         }}
       />
@@ -68,12 +65,13 @@ export const TabNavigator = () => {
         name="Notifications"
         component={Notifications}
         options={{
-          tabBarIcon: () => (
-            <Image
-              source={require('../../assets/icons/notification.png')}
-              style={styles.navIcon}
-              resizeMode={ResizeMode.contain}
-            />
+          tabBarIcon: ({ focused }) => (
+            <View style={[styles.iconContainer, focused && styles.activeIcon]}>
+              <Image
+                source={require('../../assets/icons/notification.png')}
+                style={styles.icon}
+              />
+            </View>
           ),
         }}
       />
@@ -81,15 +79,19 @@ export const TabNavigator = () => {
         name="Profile"
         component={Profile}
         options={{
-          tabBarIcon: () => (
-            <Image
-              source={require('../../assets/icons/profile.png')}
-              style={styles.navIcon}
-              resizeMode={ResizeMode.contain}
-            />
+          tabBarIcon: ({ focused }) => (
+            <View style={[styles.iconContainer, focused && styles.activeIcon]}>
+              <Image
+                source={require('../../assets/icons/profile.png')}
+                style={styles.icon}
+                resizeMode={ResizeMode.contain}
+              />
+            </View>
           ),
         }}
       />
     </Tab.Navigator>
   )
 }
+
+export default TabNavigator

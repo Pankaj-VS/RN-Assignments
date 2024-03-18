@@ -4,3 +4,15 @@ export interface IActivityData {
   progress: number
   description: string
 }
+
+
+export interface IMyReflectionsData {
+  id: string
+  date: string
+  title: string
+}
+
+export interface QuestionAnswer {
+  question: string;
+  answer: string;
+}

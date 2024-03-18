@@ -40,10 +40,13 @@ export const Progress = () => {
           </View>
         )}
         showsVerticalScrollIndicator={false}
+        ListEmptyComponent={() => <Text>Loading Data...</Text>}
       />
       <View style={styles.allReflectionImageContainer}>
         <ImageBackground style={styles.allReflectionImage} source={allReflection}>
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => navigation.navigate('MyReflections')}>
             <Text style={styles.text}>View All Reflections</Text>
           </TouchableOpacity>
         </ImageBackground>

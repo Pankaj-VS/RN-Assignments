@@ -17,11 +17,11 @@ export const styles = StyleSheet.create<IStyles>({
   container: {
     backgroundColor: COLORS.white,
     flex: Spacing.space_1,
-    paddingHorizontal: Spacing.space_20,
     paddingTop: Spacing.space_8,
   },
   subContainer: {
     flexDirection: 'row',
+    paddingHorizontal: Spacing.space_20,
   },
   button: {
     backgroundColor: COLORS.neutral[100],

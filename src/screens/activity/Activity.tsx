@@ -3,12 +3,13 @@ import { Text, TouchableOpacity, View } from 'react-native'
 
 import { ASHeader } from '../../components/header/ASHeader'
 import { COLORS } from '../../theme/colors.ts'
-import { Assessment } from './assessment/Assessment.tsx'
+
 import { Progress } from './progress/Progress.tsx'
 
 import { backGreen } from '../../constants/common-constants.ts'
 
 import { styles } from './activity-styles'
+import { Assesment } from './assessment/Assesment.tsx'
 
 export const Activity = () => {
   const [activeButton, setActiveButton] = useState<string>('progress')
@@ -37,7 +38,7 @@ export const Activity = () => {
             </Text>
           </TouchableOpacity>
         </View>
-        {activeButton === 'progress' ? <Progress /> : <Assessment />}
+        {activeButton === 'progress' ? <Progress /> : <Assesment />}
       </View>
     </>
   )

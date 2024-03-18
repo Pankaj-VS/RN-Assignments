@@ -8,3 +8,4 @@ export const activityImagePaths: { [key: string]: number } = {
 }
 
 export const allReflection = require('../assets/images/allReflections.png')
+export const myReflectionsBackground = require('../assets/images/myReflectionBackground.png')

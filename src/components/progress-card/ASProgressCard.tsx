@@ -7,7 +7,7 @@ import { Spacing } from '../../theme/spacing'
 import { ASPopUp } from '../pop-up/ASPopUp'
 
 import { activityImagePaths } from '../../constants/activity-constants'
-import { next } from '../../constants/profile-constants'
+import { nextGreen } from '../../constants/profile-constants'
 
 import { styles } from './asProgressCard-styles'
 
@@ -41,7 +41,7 @@ export const ASProgressCard = ({ title, progress, description }: IASProgressCard
           color={COLORS.secondary[700]}
         />
         <View style={styles.nextButton}>
-          <Image style={styles.buttonImage} source={next} />
+          <Image style={styles.buttonImage} source={nextGreen} />
         </View>
         {modalVisible && (
           <ASPopUp
