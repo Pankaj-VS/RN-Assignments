@@ -4,6 +4,7 @@ import { Image } from 'react-native-elements'
 
 import LinearGradient from 'react-native-linear-gradient'
 
+import { getGradientColorPostionData } from '../../../utils/common-utils.ts'
 import { palette } from '../../../theme/palette.ts'
 import TopWrecker from '../../../components/top-wreckers/ASTopWrecker.tsx'
 import { survivingIcon, thrivingIcon } from '../../../constants/assesment-constants.ts'
@@ -11,7 +12,8 @@ import { survivingIcon, thrivingIcon } from '../../../constants/assesment-consta
 import { styles } from './assesment-style.ts'
 
 export const Assesment = () => {
-  const progress: number = 50
+  const progress: number = 60
+  const colorPostion=getGradientColorPostionData(progress)
   return (
     <>
       <View style={styles.body}>
@@ -24,11 +26,13 @@ export const Assesment = () => {
             <View style={styles.scoreContainer}>
               <Text style={styles.scoreText}>{progress}/100</Text>
               <View style={styles.progressBar}>
+        
                 <View style={[styles.scoreBarLinearGradient, { width: `${progress}%` }]}>
                   <LinearGradient
-                    colors={palette.ProgressBarGradient}
+                    locations={colorPostion}
                     start={{ x: 1, y: 0 }}
                     end={{ x: 0, y: 0 }}
+                    colors={palette.ProgressBarGradient}
                     style={[styles.scoreBarLinearGradient]}></LinearGradient>
                 </View>
               </View>
