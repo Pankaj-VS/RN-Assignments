@@ -1,6 +1,5 @@
 import { ImageStyle, StyleSheet, TextStyle, ViewStyle } from 'react-native'
 
-import { COLORS } from '../../theme/colors'
 import { Spacing } from '../../theme/spacing'
 import { Typography } from '../../theme/typography'
 
@@ -24,7 +23,6 @@ export const styles = StyleSheet.create<IStyles>({
     width: Spacing.space_24,
   },
   title: {
-    color: COLORS.neutral[700],
     fontFamily: Typography.secondary.bold,
     fontSize: Spacing.space_18,
   },

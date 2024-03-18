@@ -1,5 +1,5 @@
 import React, { useEffect, useState ,} from 'react'
-import { ActivityIndicator, View ,FlatList} from 'react-native'
+import { ActivityIndicator, View ,FlatList, Text} from 'react-native'
 
 import ChallengeDetailsCard from '../../components/challenge-details-card/ASChallengeDeatilsCard'
 import Header from '../../components/dashboard-header/ASDashboardHeader'
@@ -36,7 +36,8 @@ const Dashboard = () => {
                   <ChallengeDetailsCard ChallengeDetails={item} />
                 </View>
               )}
-              
+              showsVerticalScrollIndicator={false}
+              ListEmptyComponent={() => <Text>Loading Data...</Text>}
             />
           )}
           

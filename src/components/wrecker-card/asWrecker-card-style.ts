@@ -9,10 +9,10 @@ interface IStyles {
   detailsSubContainer: ViewStyle
   wreckerImage: ImageStyle
   imageContainer: ViewStyle
-  progressBar: ViewStyle
-  progressBarContainer: ViewStyle
+
   progressPercentage: TextStyle
   title: TextStyle
+  chart:ViewStyle
 }
 
 export const styles = StyleSheet.create<IStyles>({
@@ -31,18 +31,6 @@ export const styles = StyleSheet.create<IStyles>({
   detailsSubContainer: {
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  progressBar: {
-    backgroundColor: COLORS.secondary[500],
-    borderRadius: Spacing.space_2,
-    height: Spacing.space_12,
-  },
-  progressBarContainer: {
-    backgroundColor: COLORS.secondary[300],
-    borderRadius: Spacing.space_2,
-    height: Spacing.space_12,
-    marginTop: Spacing.space_5,
-    width: Spacing.space_52,
   },
   progressPercentage: {
     color: COLORS.white,
@@ -70,4 +58,9 @@ export const styles = StyleSheet.create<IStyles>({
     resizeMode: 'cover',
     width: Spacing.space_50,
   },
+  chart: {
+    backgroundColor: COLORS.secondary[200],
+    borderRadius: Spacing.space_2,
+    borderWidth:Spacing.space_0
+  }
 })

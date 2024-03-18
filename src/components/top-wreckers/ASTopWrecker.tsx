@@ -3,7 +3,7 @@ import { ActivityIndicator, Text, View } from 'react-native'
 import { Image } from 'react-native-elements'
 
 import WreckerCard from '../wrecker-card/ASWreckerCard'
-import { nextButtonIcon } from '../../constants/assesment-constants'
+import { nextWhiteButtonIcon } from '../../constants/assesment-constants'
 import { getWreckerData } from '../../services/api/get-wrecker-data'
 
 import { styles } from './asTop-wrecker-style'
@@ -28,7 +28,7 @@ const TopWrecker = () => {
       </View>
       <View style={styles.SubDetailsContainer}>
         <Text style={styles.SubDetailsText}>View All Wreckers</Text>
-        <Image style={styles.nextButtonIcon} source={nextButtonIcon} />
+        <Image style={styles.nextButtonIcon} source={nextWhiteButtonIcon} />
       </View>
     </View>
   )

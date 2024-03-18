@@ -22,4 +22,4 @@ export const imageDetails:ImageDetails ={
 
 export  const survivingIcon = require('../assets/icons/surviving.png')
 export const thrivingIcon = require('../assets/icons/thriving.png')
-export const nextButtonIcon = require('../assets/icons/next.png')
+export const nextWhiteButtonIcon = require('../assets/icons/nextWhite.png')
