@@ -1,32 +1,29 @@
 import { StyleSheet } from 'react-native'
+import { Typography } from '../../theme/typography'
 
 export const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    width: 376,
-    height: 71,
+  mainContainer: {
     paddingVertical: 12,
     paddingHorizontal: 20,
-    marginBottom: 4,
-    borderBottomColor: '#D0F7F1',
+    gap: 4,
     borderBottomWidth: 0.5,
+    borderBottomColor: '#D0F7F1',
   },
   subContainer1: {
-    fontFamily: 'Fraunces',
+    fontFamily: Typography.secondary.bold,
     fontSize: 16,
-    fontWeight: '700',
-    lineHeight: 22.4,
+    lineHeight: 22,
+    textAlign: 'left',
   },
   subContainer2: {
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
-  text: {
-    color: '#E84C8D',
-    fontFamily: 'Quicksand',
-    fontWeight: '700',
-    lineHeight: 21,
+  title: {
+    fontFamily: Typography.primary.bold,
     fontSize: 14,
+    lineHeight: 21,
+    color: '#E84C8D',
   },
   img: {
     height: 16,
