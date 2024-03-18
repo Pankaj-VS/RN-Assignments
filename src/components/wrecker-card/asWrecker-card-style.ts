@@ -54,7 +54,7 @@ export const styles = StyleSheet.create<IStyles>({
   imageContainer: {
     alignItems: 'center',
     backgroundColor: COLORS.white,
-    borderRadius: Spacing.space_60,
+    borderRadius: Spacing.space_64,
     height: Spacing.space_76,
     justifyContent: 'center',
     marginHorizontal: Spacing.space_20,
@@ -66,8 +66,8 @@ export const styles = StyleSheet.create<IStyles>({
     gap: Spacing.space_8,
   },
   wreckerImage: {
-    height: Spacing.space_50,
+    height: Spacing.space_60,
     resizeMode: 'cover',
-    width: Spacing.space_60,
+    width: Spacing.space_50,
   },
 })

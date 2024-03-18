@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { ActivityIndicator, View } from 'react-native'
-import { FlatList } from 'react-native-gesture-handler'
+import React, { useEffect, useState ,} from 'react'
+import { ActivityIndicator, View ,FlatList} from 'react-native'
 
 import ChallengeDetailsCard from '../../components/challenge-details-card/ASChallengeDeatilsCard'
 import Header from '../../components/dashboard-header/ASDashboardHeader'
@@ -15,7 +14,9 @@ const Dashboard = () => {
   const [ChallengesData, setChallengesData] = useState([])
 
   useEffect(() => {
-    getChallengesData(setLoading, setChallengesData)
+   
+       getChallengesData(setLoading, setChallengesData)
+  
   }, [])
   return (
     <>
@@ -32,11 +33,13 @@ const Dashboard = () => {
               data={ChallengesData}
               renderItem={({ item }) => (
                 <View style={styles.flatlistItem}>
-                  <ChallengeDetailsCard ChallengeDeatils={item} />
+                  <ChallengeDetailsCard ChallengeDetails={item} />
                 </View>
               )}
+              
             />
           )}
+          
         </View>
       </View>
     </>
@@ -45,4 +48,4 @@ const Dashboard = () => {
 
 export default Dashboard
 
-// const styles = StyleSheet.create({})
+

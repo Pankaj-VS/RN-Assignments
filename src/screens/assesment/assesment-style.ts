@@ -68,7 +68,6 @@ export const styles = StyleSheet.create<IStyles>({
     flexDirection: 'row',
     gap: Spacing.space_32,
     justifyContent: 'space-between',
-    marginHorizontal: Spacing.space_20,
   },
   icon: {
     height: Spacing.space_40,

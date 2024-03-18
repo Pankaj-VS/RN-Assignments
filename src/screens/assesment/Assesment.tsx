@@ -8,9 +8,10 @@ import { palette } from '../../theme/palette'
 import TopWrecker from '../../components/top-wreckers/ASTopWrecker'
 import { survivingIcon, thrivingIcon } from '../../constants/assesment-constants'
 
-import { styles } from './assesment-style'
+import {styles}  from './assesment-style.ts';
 
-const Activity = () => {
+
+const Assesment = () => {
   const progress: number = 50
   return (
     <>
@@ -65,4 +66,4 @@ const Activity = () => {
   )
 }
 
-export default Activity
+export default Assesment
