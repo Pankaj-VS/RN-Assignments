@@ -1,13 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import Home from './src/screens/home/Home'
 
-const App = () => {
+const Map = () => {
   return (
     <View>
-      <Home/>
+      <Text>Map</Text>
     </View>
   )
 }
 
-export default App
+export default Map

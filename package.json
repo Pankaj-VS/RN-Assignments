@@ -11,7 +11,11 @@
   },
   "dependencies": {
     "react": "18.2.0",
-    "react-native": "0.73.5"
+    "react-native": "0.73.5",
+    "@react-navigation/bottom-tabs": "^6.5.20",
+    "react-native-onboarding-swiper": "^1.2.0",
+    "react-native-tab-navigator": "^0.3.4",
+    "react-native-webview": "^13.8.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
