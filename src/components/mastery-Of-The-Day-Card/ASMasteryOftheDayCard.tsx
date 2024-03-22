@@ -1,17 +1,40 @@
-import React from 'react'
-import { Image, Text, View } from 'react-native'
+import React, { useState } from 'react'
+import { Image, Text, View, TouchableOpacity, Modal } from 'react-native'
 
-import { IMasteryOftheDayCardProp,audioIcon, completedIcon, markedFavouriteIcon, notMarkedFavouriteIcon, } from '../../constants/dashboard-constants'
+import { WebView } from 'react-native-webview'
+
+import {
+  IMasteryOftheDayCardProp,
+  audioIcon,
+  completedIcon,
+  markedFavouriteIcon,
+  notMarkedFavouriteIcon,
+} from '../../constants/dashboard-constants'
 
 import { styles } from './asMastery-of-the-day-card-style'
 
 const ChallengeDetailsCard = (props: IMasteryOftheDayCardProp) => {
-  const { masteryCardDetails }=props
+  const { masteryCardDetails } = props
   const { image, subheading, heading, timingDetails, iscompleted, isfavourateMarked } =
     masteryCardDetails
+  const [isModalVisible, setIsModalVisible] = useState<boolean>(false)
 
   return (
     <View style={styles.container}>
+      <Modal
+        transparent={true}
+        visible={isModalVisible}
+        onRequestClose={() => {
+          setIsModalVisible(!isModalVisible)
+        }}>
+        <WebView source={{ uri: 'https://google.com' }} style={{ flex: 1 }} />
+        <TouchableOpacity onPress={()=>setIsModalVisible(false)}>
+          <View style={styles.webViewCloseButton}>
+            <Text style={styles.webViewCloseButtonText}>Close</Text>
+          </View>
+        </TouchableOpacity>
+      </Modal>
+
       <View style={styles.imageContainer}>
         <View style={styles.imageBackgroundContainer}>
           <Image style={styles.overThinkerBackgroundImage} source={image} />
@@ -38,7 +61,9 @@ const ChallengeDetailsCard = (props: IMasteryOftheDayCardProp) => {
         <View style={styles.timingDetailsContainer}>
           <Text style={styles.timingDetails}>{timingDetails}</Text>
           <View style={styles.audioIconBackground}>
-            <Image style={styles.audioIcon} source={audioIcon} />
+            <TouchableOpacity onPress={() => setIsModalVisible(true)}>
+              <Image style={styles.audioIcon} source={audioIcon} />
+            </TouchableOpacity>
           </View>
         </View>
       </View>

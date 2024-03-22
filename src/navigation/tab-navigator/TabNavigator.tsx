@@ -4,9 +4,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 import Dashboard from '../../screens/dashboard/Dashboard'
 import { Exercises } from '../../screens/exercises/Exercises'
-import {Activity} from '../../screens/activity/Activity'
-import {Notifications} from '../../screens/notifications/Notifications'
-import {Profile} from '../../screens/profile/Profile'
+import { Activity } from '../../screens/activity/Activity'
+import { Notifications } from '../../screens/notifications/Notifications'
+import { Profile } from '../../screens/profile/Profile'
 import { TabNavigatorParams } from '../../types/tabNavigator-types'
 
 import { ResizeMode } from '../../constants/common-constants'
@@ -67,10 +67,7 @@ const TabNavigator = () => {
         options={{
           tabBarIcon: ({ focused }) => (
             <View style={[styles.iconContainer, focused && styles.activeIcon]}>
-              <Image
-                source={require('../../assets/icons/notification.png')}
-                style={styles.icon}
-              />
+              <Image source={require('../../assets/icons/notification.png')} style={styles.icon} />
             </View>
           ),
         }}

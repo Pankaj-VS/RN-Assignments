@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { ActivityIndicator, Text, View } from 'react-native'
-import { Image } from 'react-native-elements'
+import { ActivityIndicator, Text, View, Image } from 'react-native'
 
 import WreckerCard from '../wrecker-card/ASWreckerCard'
-import { nextWhiteButtonIcon } from '../../constants/assesment-constants'
 import { getWreckerData } from '../../services/api/get-wrecker-data'
+
+import { nextWhiteButtonIcon } from '../../constants/assesment-constants'
 
 import { styles } from './asTop-wrecker-style'
 

@@ -7,6 +7,7 @@ import { ASProgressCard } from '../../../components/progress-card/ASProgressCard
 import { getScreensData } from '../../../services/api/get-screens-data.ts'
 import { StackNavigatorParams } from '../../../types/stackNavigator-types.ts'
 import { IActivityData } from '../../../types/activity-types.ts'
+import ASLoader from '../../../components/loader/ASLoader.tsx'
 
 import { allReflection } from '../../../constants/activity-constants'
 import { API } from '../../../constants/api-constants.ts'
@@ -16,6 +17,7 @@ import { styles } from './progress-styles'
 export const Progress = () => {
   const [activityData, setActivityData] = useState<IActivityData[]>([])
   const navigation = useNavigation<StackNavigationProp<StackNavigatorParams>>()
+  const [loading,setLoading]= useState<boolean>(true);
 
   const fetchActivityData = async () => {
     const response = await getScreensData(API.WRECKERS_API)
@@ -24,6 +26,7 @@ export const Progress = () => {
     } else {
       console.error(response.error)
     }
+    setLoading(false);
   }
 
   useEffect(() => {
@@ -31,6 +34,7 @@ export const Progress = () => {
   }, [])
 
   return (
+    loading ? <ASLoader/> : 
     <View style={styles.container}>
       <FlatList
         data={activityData}

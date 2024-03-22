@@ -5,9 +5,10 @@ import { Spacing } from '../../theme/spacing'
 interface IStyles {
   FlatList: ViewStyle
   flatListContainer: ViewStyle
-  flatlistItem:ViewStyle
+  flatlistItem: ViewStyle
   masteryOftheDayCard: ViewStyle
 }
+
 export const styles = StyleSheet.create<IStyles>({
   masteryOftheDayCard: {
     backgroundColor: COLORS.primary[50],

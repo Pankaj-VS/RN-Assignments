@@ -74,3 +74,4 @@ export const styles = StyleSheet.create({
     borderBottomLeftRadius: Spacing.space_12,
   },
 })
+

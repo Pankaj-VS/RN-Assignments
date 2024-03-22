@@ -5,7 +5,7 @@ const Colors = {
   secondary: palette.pink,
   accent: palette.yellow,
   neutral: palette.shark,
-  failure: palette.punch,
+  punch: palette.punch,
   success: palette.genoa,
   white: palette.white,
   tundora: palette.tundora,

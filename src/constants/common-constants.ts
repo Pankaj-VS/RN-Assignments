@@ -13,5 +13,3 @@ export const myReflectionBackgroundImage = require('../assets/images/myReflectio
 export const leftIconWhite = require('../assets/icons/leftIconWhite.png')
 export const backWhite = require('../assets/icons/backWhite.png')
 export const backGreen = require('../assets/icons/backGreen.png')
-
-export const showNotificationPage: boolean = true

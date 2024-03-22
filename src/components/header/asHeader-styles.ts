@@ -1,4 +1,4 @@
-import { ImageStyle, StyleSheet, TextStyle, ViewStyle } from 'react-native'
+import { ImageStyle, StatusBar, StyleSheet, TextStyle, ViewStyle } from 'react-native'
 
 import { Spacing } from '../../theme/spacing'
 import { Typography } from '../../theme/typography'
@@ -17,6 +17,7 @@ export const styles = StyleSheet.create<IStyles>({
     justifyContent: 'space-between',
     paddingHorizontal: Spacing.space_24,
     paddingVertical: Spacing.space_16,
+    paddingTop: StatusBar.currentHeight,
   },
   imageContainer: {
     height: Spacing.space_24,

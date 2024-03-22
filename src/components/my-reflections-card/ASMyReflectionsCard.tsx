@@ -1,12 +1,12 @@
 import React from 'react'
 import { Text, View, TouchableOpacity, Image } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
+import { StackNavigatorParams } from '../../types/stackNavigator-types'
+import { StackNavigationProp } from '@react-navigation/stack'
 
 import { nextGreen } from '../../constants/profile-constants'
 
 import { styles } from './asMyReflectionsCard-styles'
-import { StackNavigationProp } from '@react-navigation/stack'
-import { StackNavigatorParams } from '../../types/stackNavigator-types'
 
 interface IASMyReflectionCardProps {
   date: string

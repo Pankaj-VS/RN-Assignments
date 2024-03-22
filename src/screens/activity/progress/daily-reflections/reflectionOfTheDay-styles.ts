@@ -3,17 +3,16 @@ import { COLORS } from '../../../../theme/colors'
 import { Spacing } from '../../../../theme/spacing'
 import { Typography } from '../../../../theme/typography'
 
-
 export const styles = StyleSheet.create({
   mainContainer: {
     flex: Spacing.space_1,
-    backgroundColor: COLORS.primary[600],
+    backgroundColor: COLORS.primary[700],
   },
-  subContainer1: {
+  centerAlign: {
     flexDirection: 'row',
     justifyContent: 'space-around',
   },
-  subContainer2: {
+  whiteContainer: {
     width: Spacing.space_335,
     height: Spacing.space_546,
     paddingVertical: Spacing.space_32,
@@ -21,28 +20,29 @@ export const styles = StyleSheet.create({
     borderRadius: Spacing.space_16,
     backgroundColor: COLORS.white,
   },
-  subContainer3: {
+  queAnsContainer: {
     height: Spacing.space_434,
     borderRadius: Spacing.space_8,
     paddingVertical: Spacing.space_20,
     paddingHorizontal: Spacing.space_20,
     backgroundColor: COLORS.primary[50],
   },
-  txt: {
+  text: {
     fontFamily: Typography.primary.medium,
     fontSize: Spacing.space_16,
     lineHeight: Spacing.space_24,
   },
-  subContainer4: {
+  buttonsContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingHorizontal: Spacing.space_20,
+    marginTop:Spacing.space_18,
   },
   button: {
     fontFamily: Typography.primary.bold,
     fontSize: Spacing.space_16,
     lineHeight: Spacing.space_24,
-    color: COLORS.primary[600],
+    color: COLORS.primary[700],
   },
   buttonInvisible: {
     fontFamily: Typography.primary.bold,
@@ -58,6 +58,7 @@ export const styles = StyleSheet.create({
     marginBottom: Spacing.space_8,
   },
   progressBar: {
+    backgroundColor: COLORS.white,
     marginBottom: Spacing.space_22,
   },
   effect1: {

@@ -1,8 +1,10 @@
 import { ImageStyle, StyleSheet, TextStyle, ViewStyle } from 'react-native'
+
 import { COLORS } from '../../theme/colors'
 import { palette } from '../../theme/palette'
 import { Spacing } from '../../theme/spacing'
 import { Typography } from '../../theme/typography'
+import { fonts } from 'react-native-elements/dist/config'
 
 interface IStyles {
   audioIconBackground: ViewStyle
@@ -21,6 +23,8 @@ interface IStyles {
   imageContainer: ViewStyle
   detailsContainer: ViewStyle
   imageBackgroundContainer: ViewStyle
+  webViewCloseButton:ViewStyle
+  webViewCloseButtonText:TextStyle
 }
 
 export const styles = StyleSheet.create<IStyles>({
@@ -103,5 +107,15 @@ export const styles = StyleSheet.create<IStyles>({
   },
   imageBackgroundContainer: {
     backgroundColor: COLORS.primary[100],
+  },
+  webViewCloseButton:{
+    height:Spacing.space_40,
+    backgroundColor: COLORS.neutral[300],
+    justifyContent:'center',
+    alignItems:'center'
+  },
+  webViewCloseButtonText:{
+    fontFamily:Typography.primary.bold,
+    fontSize:Spacing.space_14,
   },
 })

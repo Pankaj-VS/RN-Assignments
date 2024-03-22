@@ -1,8 +1,9 @@
 import React from 'react'
 import { Image, ImageBackground, Text, View } from 'react-native'
 
-import { calendarImage, headerBackground, overthinkerImage } from '../../constants/dashboard-constants'
 import { getCurrentDayDate } from '../../utils/common-utils'
+
+import { calendarImage, headerBackground, overthinkerImage } from '../../constants/dashboard-constants'
 
 import { styles } from './asDashboard-header-style'
 
